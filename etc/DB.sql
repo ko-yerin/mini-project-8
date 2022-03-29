@@ -8,6 +8,6 @@ CREATE TABLE board(
     story TEXT NOT NULL
 );
 
-INSERT INTO board(idx,subject,nickname,story) values (1,'test','mini','hello')
+INSERT INTO board(idx,subject,nickname,story) values (1,'test','mini','hello');
 
 
