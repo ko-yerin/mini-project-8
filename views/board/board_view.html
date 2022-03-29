@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul><h2>글보기</h2>
+        <li>
+            <span>글번호:</span>
+            <span>{{ view_db.idx }}</span>
+        </li>
+        <li>
+            <span>글제목:</span>
+            <span>{{ view_db.subject }}</span>
+        </li>
+        <li>
+            <span>작성자:</span>
+            <span>{{ view_db.nickname }}</span>
+        </li>
+        <li>
+            <span>내용:</span>
+            <span>{{ view_db.story }}</span>
+        </li>
+    </ul>
+    <button><a href="/list">목록으로 돌아가기</a></button>
+    <button><a href="/board/update?idx={{view_db.idx}}">글수정하기</a></button>
+    <button><a href="/board/delete?idx={{view_db.idx}}">글삭제하기</a></button>
+</body>
+</html>

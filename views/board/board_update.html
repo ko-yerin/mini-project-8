@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>
+        글수정하기
+    </h2>
+    <form method="post" action="/board/update">
+        <span>글번호</span>
+        <input type="text" name="idx" value="{{ update_db.idx }}" readonly><br/>
+        <br/>
+        <span>제목</span>
+        <input type="text" name="subject" value="{{ update_db.subject }}"><br/>
+        <br/>
+        <span>작성자</span>
+        <input type="text" name="nickname" value="{{ update_db.nickname }}"><br/>
+        <br/>
+        <span>내용</span>
+        <input type="text" name="story" value="{{ update_db.story }}"><br/>
+        <button><a href="/board/list">뒤로가기</a></button>
+        <input type="submit" value="글수정완료">
+    </form>
+</body>
+</html>
