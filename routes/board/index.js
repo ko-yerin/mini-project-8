@@ -90,7 +90,7 @@ router.post('/update',async(req,res) => {
     }
 })
 
-router.get('/delete',async(req,res) => {
+router.post('/delete',async(req,res) => {
     const {idx} = req.query
     const conn = await pool.getConnection()
     try {
