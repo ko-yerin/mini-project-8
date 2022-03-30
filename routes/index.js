@@ -2,6 +2,7 @@ const express = require('express')
 const router = express.Router()
 const { pool } = require('../db')
 const boardRouter = require('./board')
+const adminRouter = require('./admin')
 
 router.get('/',async(req,res) => {
     const sql = `SELECT * FROM board;`
@@ -14,7 +15,7 @@ router.get('/',async(req,res) => {
 
 
 router.use('/board',boardRouter)
-router.use('/admin',boardRouter)
+router.use('/admin',adminRouter)
 
 
 module.exports = router
