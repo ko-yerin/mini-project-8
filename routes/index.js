@@ -25,6 +25,7 @@ router.get('/',async(req,res) => {
 
 router.use('/board',boardRouter)
 router.use('/user',userRouter)
+router.use('/admin',boardRouter)
 
 
 module.exports = router
