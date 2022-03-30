@@ -47,7 +47,7 @@ router.post('/join',async(req,res) => {
     
         const [result] = await pool.execute(sql,prepare)
         // res.redirect('/user/welcome')
-        res.send(alertmove('/user/welcome?userid=${userid}&username=${username}&gender=${gender}&email=${email}&address=${address}&tell=${tell}','회원가입이 완료되었습니다'))}
+        }
     }catch(error){
         if(error.errno===1062){
             res.send(alertmove('/user/join', '이미 존재하는 아이디입니다'))
@@ -55,10 +55,18 @@ router.post('/join',async(req,res) => {
         console.log(error)
         // res.send(alertmove('/user/join', '입력한 정보를 확인해주세요.'))
     }
+    res.send(alertmove('/user/user_welcome','환영합니다'))
 })
 
-router.get('/welcome',(req,res) => {
+router.get('/welcome',async(req,res) => {
+    let idx = req.query.userid
+
+    const sql = `SELECT * FROM user WHERE idx = ${userid};`
+    const prepare = []
+    const [result] = await pool.execute(sql,prepare)
+    console.log(result)
     res.render('user/user_welcome')
+    content:result
 })
 
 router.get('/login',(req,res) => {
