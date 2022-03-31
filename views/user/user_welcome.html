@@ -10,7 +10,7 @@
     <h1>
         <a href="/">LOGO</a>
     </h1>
-    { % for item in content % }
+    {% for item in content %}
     <h2>
         환영합니다 {{ item.username }} 님
     </h2>
@@ -37,6 +37,6 @@
             핸드폰번호 {{ item.tell }}
         </li>
     </ul>
-    { % endfor %} 
+    {% endfor %} 
 </body>
 </html>

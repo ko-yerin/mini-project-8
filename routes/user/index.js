@@ -27,10 +27,14 @@ router.get('/join',(req,res) => {
 // })
 
 router.post('/join',async(req,res) => {
-    let user = { ...req.body } 
-    const { userid, userpw, username, nickname, birth, gender, tell, email, address } = user
-    console.log(user)
+    // let user = { ...req.body }   // let user = (req.body)     let user = req.body   다 결과는 똑같았다
+    // const { userid, userpw, username, nickname, birth, gender, tell, email, address } = user
 
+    //위2줄과 아랫줄은 똑같음
+
+    const { userid, userpw, username, nickname, birth, gender, tell, email, address } = { ...req.body }
+    console.log(userid)
+    console.log(req.body.userid)
     try{
         if(tell.length!=11){
             res.send(alertmove('/user/join', '핸드폰번호를 다시입력해주세요'))
@@ -55,18 +59,21 @@ router.post('/join',async(req,res) => {
         console.log(error)
         // res.send(alertmove('/user/join', '입력한 정보를 확인해주세요.'))
     }
-    res.send(alertmove('/user/user_welcome','환영합니다'))
+    res.send(alertmove(`/user/welcome?userid=${user.userid}`,'환영합니다'))
 })
 
 router.get('/welcome',async(req,res) => {
-    let idx = req.query.userid
-
-    const sql = `SELECT * FROM user WHERE idx = ${userid};`
+    let userid = req.query.userid
+    console.log('userid : ',userid)
+    const sql = `SELECT * FROM user WHERE userid = '${userid}';`
     const prepare = []
     const [result] = await pool.execute(sql,prepare)
-    console.log(result)
-    res.render('user/user_welcome')
-    content:result
+    console.log('result : ',result)
+
+    res.render('user/user_welcome',{
+        content:result,
+    })
+    
 })
 
 router.get('/login',(req,res) => {

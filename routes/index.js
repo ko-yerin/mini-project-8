@@ -25,12 +25,8 @@ router.get('/',async(req,res) => {
 // })
 
 router.use('/board',boardRouter)
-<<<<<<< HEAD
 router.use('/user',userRouter)
 router.use('/admin',boardRouter)
-=======
-router.use('/admin',adminRouter)
->>>>>>> 56ae5880dcd6f9df2782c2584648716eda022858
 
 
 module.exports = router
