@@ -59,7 +59,7 @@ router.post('/join',async(req,res) => {
         console.log(error)
         // res.send(alertmove('/user/join', '입력한 정보를 확인해주세요.'))
     }
-    res.send(alertmove(`/user/welcome?userid=${user.userid}`,'환영합니다'))
+    res.send(alertmove(`/user/welcome?userid=${userid}`,'환영합니다'))
 })
 
 router.get('/welcome',async(req,res) => {
