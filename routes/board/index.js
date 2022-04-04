@@ -9,10 +9,9 @@ router.get('/list', async(req,res) => {
 
     let list = result
     console.log(list)
-
-    res.render('board/board_list',{ 
-        content:list
-    }) 
+    
+    
+    res.render('board/board_list', { content : list }) 
 })
 
 router.get('/write',(req,res) => {

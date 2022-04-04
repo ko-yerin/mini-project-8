@@ -1,10 +1,10 @@
 const express = require('express')
 const router = express.Router()
 const { pool } = require('../db')
-const { alertmove } = require('../util/alertmove')
+const { alertmove } = require('../util/alertmove') //자기자신을 담고 있는 부모폴더
 const boardRouter = require('./board')
 const userRouter = require('./user')
-const adminRouter = require('./admin')
+const adminRouter = require('./admin') //자기자신의 폴더(디렉토리)
 
 router.get('/',async(req,res) => {
     console.log('session 확인', req.session)
@@ -32,7 +32,7 @@ router.get('/',async(req,res) => {
 
 router.use('/board',boardRouter)
 router.use('/user',userRouter)
-router.use('/admin',boardRouter)
+router.use('/admin',adminRouter)
 
 
 module.exports = router
