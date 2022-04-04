@@ -37,29 +37,28 @@ router.post('/join',async(req,res) => {
     console.log(req.body.userid)
     try{
         if(tell.length!=11){
-            res.send(alertmove('/user/join', '핸드폰번호를 다시입력해주세요'))
+            return res.send(alertmove('/user/join', '핸드폰번호를 다시입력해주세요'))
         } else if( userid.length===0 || userpw.length===0 || nickname.length===0 || gender.length===0 || tell.length===0 || email.length===0 || address.length===0 ){
-            res.send(alertmove('/user/join', '빠진정보없이 전부다 기입해주세요'))   
-        }else if( username.length===0 || username.length===1 ){
-            res.send(alertmove('/user/join', '이름을 다시 입력해주세요')) 
-        }else if ( birth.length!=6 ){
-            res.send(alertmove('/user/join', '생년월일을 다시 입력해주세요')) 
-        }
-        else {
+            return res.send(alertmove('/user/join', '빠진정보없이 전부다 기입해주세요'))   
+        } else if( username.length===0 || username.length===1 ){
+            return res.send(alertmove('/user/join', '이름을 다시 입력해주세요')) 
+        } else if ( birth.length!=6 ){
+            return res.send(alertmove('/user/join', '예시대로 생년월일을 다시 입력해주세요')) 
+        } else {
         const sql = `INSERT INTO user(userid, userpw, username, nickname, birth, gender, tell, email, address) values('${userid}' , '${userpw}' , '${username}' , '${nickname}' , '${birth}' , '${gender}' , '${tell}' , '${email}' , '${address}');`
         const prepare = []
     
         const [result] = await pool.execute(sql,prepare)
         // res.redirect('/user/welcome')
         }
-    }catch(error){
+    } catch(error){
         if(error.errno===1062){
-            res.send(alertmove('/user/join', '이미 존재하는 아이디입니다'))
+            return res.send(alertmove('/user/join', '이미 존재하는 아이디입니다'))
         }
         console.log(error)
         // res.send(alertmove('/user/join', '입력한 정보를 확인해주세요.'))
     }
-    res.send(alertmove(`/user/welcome?userid=${userid}`,'환영합니다'))
+    return res.send(alertmove(`/user/welcome?userid=${userid}`,'환영합니다'))
 })
 
 router.get('/welcome',async(req,res) => {

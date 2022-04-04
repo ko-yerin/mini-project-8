@@ -22,6 +22,8 @@ CREATE TABLE board(
     story TEXT NOT NULL
 );
 
+
+
 INSERT INTO board(idx,subject,nickname,story) values (1,'test','mini','hello');
 
 INSERT INTO user(userid,userpw,username,nickname,birth,gender,tell,email,address) values('rhdpfls12','1234','고예린','소고기','940426','여','010123456','rhdpfls12@naver.com','경기도 하남시');
