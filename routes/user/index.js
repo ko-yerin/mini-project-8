@@ -39,6 +39,9 @@ router.post('/join', async (req, res) => {
         const prepare = []
         const [result] = await pool.execute(sql, prepare)
         // res.redirect('/user/welcome')
+        //이걸원래 try문 맨밑에 55번째 줄에 입력해주었다 그랬더니 동일아이디입력, 폰번호 11자리 노입력 했을때  
+        //이미 존재하는 아이디라고 뜨는게 아니라 핸드폰번호를 다시입력해달라고떳다 나는 에러코드 경고창을 먼저띄우고싶다
+        //그래서 에러를 먼저읽어서 먼저 처리될수있게  맨위로 올려주었다
 
         if (tell.length != 11) {
             return res.send(alertmove('/user/join', '핸드폰번호를 다시입력해주세요'))
