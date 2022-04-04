@@ -9,10 +9,9 @@ router.get('/list', async(req,res) => {
 
     let list = result
     console.log(list)
-
-    res.render('board/board_list',{ 
-        content:list
-    }) 
+    
+    
+    res.render('board/board_list', { content : list }) 
 })
 
 router.get('/write',(req,res) => {
@@ -90,7 +89,7 @@ router.post('/update',async(req,res) => {
     }
 })
 
-router.post('/delete',async(req,res) => {
+router.get('/delete',async(req,res) => {
     const {idx} = req.query
     const conn = await pool.getConnection()
     try {
