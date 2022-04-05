@@ -29,6 +29,19 @@ router.get('/',async(req,res) => {
     }
 })
 
+//로그인사용자 세션 삭제
+router.get('/logout', (req, res) => {
+    req.session.destroy(() => {
+        req.session
+    });
+    res.send(alertmove('/','로그아웃 완료'))
+})
+//destroy method는 연결된 세션을 다 삭제하는 역할 !! 형태를 기억하자
+//main에 있는 로그아웃버튼을 누르면 /logout으로 링크가 이동하며 세션이 삭제되고
+//경고창이 뜨고 다시 메인으로 이동한다
+//user  index에 넣어놔도 똑같이 작동되지만  그럼 링크가 /user/logout가게된다
+//그래서 여기로 옮겨줌
+
 // router.get('/',async(req,res) => {
 //     const sql = `SELECT * FROM user;`
 //     const prepare = []

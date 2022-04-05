@@ -150,16 +150,6 @@ router.post('/login', async (req, res) => {
     // res.redirect('/')
 })
 
-//로그인사용자 세션 삭제
-router.post('/', (req, res) => {
-    const userid = req.session.user.userid
-    req.session.destroy(() => {
-        req.session
-    });
-    res.send(alertmove('/','로그아웃 완료'))
-})
-//destroy method는 연결된 세션을 다 삭제하는 역할 !! 형태를 기억하자
-
 router.get('/profile', async (req, res) => {
     let userid = req.query.userid
     console.log(userid)
@@ -206,6 +196,7 @@ router.post('/update', async (req, res) => {
     //html에서 쿼리에 유저아디를 넣어줬지만 안됬다..
     //그래서 session의 유저아디를 넣어줬더니 성공
     //근데 왜 전부다 수정되는거지...
+    //그래서 update문뒤에  WHERE userid = '${userid}' 추가해줬더니 하나만 수정됨
     const {nickname, address, email, tell, userpw} = {...req.body}
     try{
     const sql = `UPDATE user set nickname = '${nickname}', address = '${address}', email = '${email}', tell = '${tell}', userpw = '${userpw}' WHERE userid = '${userid}';`
