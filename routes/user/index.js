@@ -39,6 +39,9 @@ router.post('/join', async (req, res) => {
         const prepare = []
         const [result] = await pool.execute(sql, prepare)
         // res.redirect('/user/welcome')
+        //이걸원래 try문 맨밑에 55번째 줄에 입력해주었다 그랬더니 동일아이디입력, 폰번호 11자리 노입력 했을때  
+        //이미 존재하는 아이디라고 뜨는게 아니라 핸드폰번호를 다시입력해달라고떳다 나는 에러코드 경고창을 먼저띄우고싶다
+        //그래서 에러를 먼저읽어서 먼저 처리될수있게  맨위로 올려주었다
 
         if (tell.length != 11) {
             return res.send(alertmove('/user/join', '핸드폰번호를 다시입력해주세요'))
@@ -66,10 +69,11 @@ router.get('/welcome', async (req, res) => {
     const sql = `SELECT * FROM user WHERE userid = '${userid}';`
     const prepare = []
     const [result] = await pool.execute(sql, prepare)
+    const [arr_out] = result
     // console.log('result : ',result)
 
     res.render('user/user_welcome', {
-        content: result,
+        content: arr_out,
     })
 })
 
@@ -155,21 +159,71 @@ router.post('/logout', (req, res) => {
 })
 //destroy method는 연결된 세션을 다 삭제하는 역할 !! 형태를 기억하자
 
-router.get('/profile', (req, res) => {
-    res.render('user/user_profile')
+router.get('/profile', async (req, res) => {
+    let userid = req.query.userid
+    console.log(userid)
+    const sql = `SELECT * FROM user WHERE userid = '${userid}';`
+    const prepare = []
+    const [result] = await pool.execute(sql,prepare)
+    const [arr_out] = result
+    console.log('result:',result)
+
+
+    res.render('user/user_profile',{
+        content:arr_out,
+    })
 })
 //profile은 view처럼 회원가입시 정보를 보여주기만 하는거라 post필요없다
 //profile은 로그인성공했을 시 보이게 
 
-router.get('/update', (req, res) => {
-    res.render('user/user_update')
+router.get('/update', async (req, res) => {
+    let userid = req.query.userid
+
+    // console.log('userid:',userid)
+    const sql = `SELECT * FROM user WHERE userid = '${userid}';`
+    const prepare = []
+    const [result] = await pool.execute(sql,prepare)
+    const [arr_out] = result
+    console.log('result:',result)
+
+    res.render('user/user_update',{
+        content:arr_out,
+        userid:userid
+    })
 })
 
-router.post('/update', (req, res) => {
-    res.redirect('/')
+router.post('/update', async (req, res) => {
+    // let nickname = req.body.nickname
+    // let address = req.body.address
+    // let email = req.body.email
+    // let tell = req.body.tell
+    // let password = req.body.password
+    // console.log(req.session.user.userid)
+    const userid = req.session.user.userid
+    //수정을 하고 수정하기 버튼을 눌렀을때  프로필에 아무값도 뜨지 않았다.  변경을 되었다
+    //userid를 갖고오지 못하는 것같다 
+    //html에서 쿼리에 유저아디를 넣어줬지만 안됬다..
+    //그래서 session의 유저아디를 넣어줬더니 성공
+    const {nickname, address, email, tell, userpw} = {...req.body}
+    try{
+    const sql = `UPDATE user set nickname = '${nickname}', address = '${address}', email = '${email}', tell = '${tell}', userpw = '${userpw}';`
+    const prepare = []
+    const [result] = await pool.execute(sql,prepare)
+    // console.log('result:',result)
+
+
+    res.redirect(`/user/profile?userid=${userid}`)
+    } catch (error){
+        console.log(error)
+    }
 })
 
-router.post('/resign', (req, res) => {
+
+router.post('/resign', async (req, res) => {
+    let userid = {...req.body}
+    const sql = `DELETE FROM user WHERE userid = ${userid};`
+    const prepare =[]
+    const [result] = await pool.execute(sql,prepare)
     res.redirect('/')
 })
 

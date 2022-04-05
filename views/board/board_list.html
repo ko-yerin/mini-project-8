@@ -22,6 +22,7 @@
             </tr>
             
             {% for item in content %}
+            <!-- 이건 리스트처럼 반복문에만 쓰이는 거다!!!! -->
             <tr>
                 <td>{{ item.idx }}</td>
                 <td><a href = "/board/view?idx={{item.idx}}">{{ item.subject }}</a></td>
