@@ -11,8 +11,13 @@ CREATE TABLE user(
     gender CHAR(2) NOT NULL,  //이거아님 이거로 고정적으로 들어가니 CHAR로 해주면 될듯
     tell VARCHAR(11) NOT NULL,    //숫자가 아닌 문자 
     email VARCHAR(30) NOT NULL,
+<<<<<<< HEAD
     address VARCHAR(50) NOT NULL,
     level INT NOT NULL DEFAULT 3,
+=======
+    address VARCHAR(50) NOT NULL
+    level INT NOT NULL DEFAULT 3
+>>>>>>> cee2cccea4d2c69941c7fedf2832abbb79465f27
     active INT NOT NULL DEfAULT 1
 );
 
