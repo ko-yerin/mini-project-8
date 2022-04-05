@@ -13,7 +13,7 @@
     <div>
         <div><h1>회원 목록</h1></div>
     </div>
-    <div>
+    <div> 
         <table>
             <tr>
                 <td>no.</td>
@@ -23,19 +23,24 @@
                 <td>전화번호</td>
                 <td>Email</td>
                 <td>level</td>
+                <td>active</td>
             </tr>
             {% for item in content %}
             <tr>
+                <form action="/admin/userUpdate" method="post">
                 <td>{{item.idx}}</td>
-                <td><a href="/admin/userView?idx={{item.idx}}">{{ item.username}}</a></td>
+                <td><a href="/admin/userView?userid={{item.userid}}">{{ item.username}}</a></td>
                 <td>{{item.nickname}}</td>
                 <td>{{item.gender}}</td>
                 <td>{{item.tell}}</td>
                 <td>{{item.email}}</td>
                 <td>{{item.level}}</td>
+                <td>{{item.active}}</td>
+               </form>
             </tr>
             {% endfor %}
         </table>
+ 
     </div>
 </body>
 </html>

@@ -13,6 +13,7 @@ CREATE TABLE user(
     email VARCHAR(30) NOT NULL,
     address VARCHAR(50) NOT NULL
     level INT NOT NULL DEFAULT 3
+    active INT NOT NULL DEfAULT 1
 );
 
 CREATE TABLE board(
