@@ -11,6 +11,9 @@
         <div><a href="">관리자 회원관리</a></div>
     </div>
     <div>
+        <button><a href="/logout">로그아웃</a></button>
+    </div>
+    <div>
         <div><h1>회원 목록</h1></div>
     </div>
     <div> 
@@ -27,16 +30,20 @@
             </tr>
             {% for item in content %}
             <tr>
-                <form action="/admin/userUpdate" method="post">
+                <form action="/admin/userLevelUpdate" method="post">
                 <td>{{item.idx}}</td>
-                <td><a href="/admin/userView?userid={{item.userid}}">{{ item.username}}</a></td>
+                <td><input name="userid" value="{{item.userid}}" style="display: none;"> 
+                    <a href="/admin/userView?userid={{item.userid}}">{{ item.username}}</a></td>
                 <td>{{item.nickname}}</td>
                 <td>{{item.gender}}</td>
                 <td>{{item.tell}}</td>
                 <td>{{item.email}}</td>
                 <td>{{item.level}}</td>
                 <td>{{item.active}}</td>
-               </form>
+                <td><select name="level"><option>3</option>
+                    <option>2</option></select></td>              
+                    <td><select name="active" ><option value="1" >활성화</option><option value="0">비활성화</option></select></td>
+                <td><button type="submit">저장</button></td> </form>
             </tr>
             {% endfor %}
         </table>
