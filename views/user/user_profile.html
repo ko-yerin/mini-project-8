@@ -7,31 +7,38 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>내프로필</h1>
-    {% for item in content %}
+    <h1><a href="/">LOGO</a></h1>
+    <h2>내프로필</h2>
     <ul>
         <li>
-            이름 {{ item.username }}
+            아이디 {{ content.userid }}
         </li>
         <li>
-            별명 {{ item.nickname }}
+            이름 {{ content.username }}
         </li>
         <li>
-            성별 {{ item.gender }}
+            별명 {{ content.nickname }}
         </li>
         <li>
-            주소 {{ item.address }}
+            성별 {{ content.gender }}
         </li>
         <li>
-            이메일 {{ item.email }}
+            주소 {{ content.address }}
         </li>
         <li>
-            핸드폰번호 {{ item.tell }}
+            이메일 {{ content.email }}
         </li>
         <li>
-            생일 {{ item.birth }}
+            핸드폰번호 {{ content.tell }}
+        </li>
+        <li>
+            생년월일 {{ content.birth }}
         </li>
     </ul>
-    {%  endfor %}
+    <button><a href="/user/update?userid={{content.userid}}">수정하기</a></button>
+    <form method="post" action="/user/resign">
+        <input type="hidden" name="userid" value="{{content.userid}}">
+        <input type="submit" value="회원탈퇴">
+    </form>
 </body>
 </html>

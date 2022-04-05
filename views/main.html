@@ -7,15 +7,28 @@
     <title>Document</title>
 </head>
 <body>
+    <!-- 로그인후 
+    메인 routes에서 if문을 통해  userid가 undefined가 아니다라는 걸 밑에서 알수있도록 해주었다 -->
+    {% if (userid !== undefined) %}
     <h1>
         <a href="/">LOGO</a>
     </h1>
     <ul>
         <li><a href="/board/list"><button>게시판</a></li></button>
-        <li><a href="/user/login"><button>로그인</button></a></li>
+        <li><a href="/user/profile?userid={{userid}}"><button>프로필</button></a></li>
         <li><a href="/"><button>로그아웃</button></a></li>
-        <li><a href="/user/join"><button>회원가입</button></a></li>
     </ul>    
+    <!-- 로그인전 -->
+    {%  else %}
+    <h1>
+        <a href="/">LOGO</a>
+    </h1>
+    <ul>
+        <li><a href="/user/join"><button>회원가입</button></a></li>
+        <li><a href="/user/login"><button>로그인</button></a></li>
+        <li><a href="/board/list"><button>게시판</a></li></button>
+    </ul>
+    {%  endif %}
 </body>
 </html>
 
