@@ -36,7 +36,7 @@
         </li>
     </ul>
     <button><a href="/user/update?userid={{content.userid}}">수정하기</a></button>
-    <form method="post" action="/user/resign">
+    <form method="post" action="/user/member_secession">
         <input type="hidden" name="userid" value="{{content.userid}}">
         <input type="submit" value="회원탈퇴">
     </form>

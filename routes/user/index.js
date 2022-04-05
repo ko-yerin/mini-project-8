@@ -212,12 +212,20 @@ router.post('/update', async (req, res) => {
 })
 
 
-router.post('/resign', async (req, res) => {
-    let userid = {...req.body}
-    const sql = `DELETE FROM user WHERE userid = ${userid};`
+router.post('/member_secession', async (req, res) => {
+    let userid = req.session.user.userid
+    console.log('userid 있니:',userid)
+    const sql = `DELETE FROM user WHERE userid = '${userid}';`
     const prepare =[]
     const [result] = await pool.execute(sql,prepare)
-    res.redirect('/')
+    console.log('result 있니:',result)
+
+    req.session.destroy(() => {
+        req.session
+    });
+    res.send(alertmove('/', '회원탈퇴가 완료되었습니다'))
 })
+//delete문으로 db에서 없애는것 성공
+//근데 메인으로 돌아왔을때  로그아웃으로 떠서 세션도 없애주는 코드입력
 
 module.exports = router
