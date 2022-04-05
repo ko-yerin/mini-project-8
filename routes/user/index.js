@@ -151,7 +151,8 @@ router.post('/login', async (req, res) => {
 })
 
 //로그인사용자 세션 삭제
-router.post('/logout', (req, res) => {
+router.post('/', (req, res) => {
+    const userid = req.session.user.userid
     req.session.destroy(() => {
         req.session
     });
@@ -204,9 +205,10 @@ router.post('/update', async (req, res) => {
     //userid를 갖고오지 못하는 것같다 
     //html에서 쿼리에 유저아디를 넣어줬지만 안됬다..
     //그래서 session의 유저아디를 넣어줬더니 성공
+    //근데 왜 전부다 수정되는거지...
     const {nickname, address, email, tell, userpw} = {...req.body}
     try{
-    const sql = `UPDATE user set nickname = '${nickname}', address = '${address}', email = '${email}', tell = '${tell}', userpw = '${userpw}';`
+    const sql = `UPDATE user set nickname = '${nickname}', address = '${address}', email = '${email}', tell = '${tell}', userpw = '${userpw}' WHERE userid = '${userid}';`
     const prepare = []
     const [result] = await pool.execute(sql,prepare)
     // console.log('result:',result)
