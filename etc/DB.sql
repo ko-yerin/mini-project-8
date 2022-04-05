@@ -12,6 +12,8 @@ CREATE TABLE user(
     tell VARCHAR(11) NOT NULL,    //숫자가 아닌 문자 
     email VARCHAR(30) NOT NULL,
     address VARCHAR(50) NOT NULL
+    level INT NOT NULL DEFAULT 3
+    active INT NOT NULL DEfAULT 1
 );
 
 CREATE TABLE board(

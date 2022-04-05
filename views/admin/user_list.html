@@ -13,42 +13,34 @@
     <div>
         <div><h1>회원 목록</h1></div>
     </div>
-    <div>
+    <div> 
         <table>
             <tr>
-                <td>No.</td>
-                <td>Username</td>
-                <td>Level</td>
-                <td>date</td>
+                <td>no.</td>
+                <td>이름</td>
+                <td>닉네임</td>
+                <td>성별</td>
+                <td>전화번호</td>
+                <td>Email</td>
+                <td>level</td>
+                <td>active</td>
             </tr>
+            {% for item in content %}
             <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <form action="/admin/userUpdate" method="post">
+                <td>{{item.idx}}</td>
+                <td><a href="/admin/userView?userid={{item.userid}}">{{ item.username}}</a></td>
+                <td>{{item.nickname}}</td>
+                <td>{{item.gender}}</td>
+                <td>{{item.tell}}</td>
+                <td>{{item.email}}</td>
+                <td>{{item.level}}</td>
+                <td>{{item.active}}</td>
+               </form>
             </tr>
+            {% endfor %}
         </table>
+ 
     </div>
-    <!-- <table>
-        <tr>
-            <td>No.</td>
-            <td>username</td>
-            <td>level</td>
-            <td>date</td>
-        </tr>
-        
-        {% set num = 1 %}
-        {% for item in result %}
-        <tr>
-            <td>{{num}}</td>
-            <td><a href="/admin/view?indx={{num}}">{{item.username}}</a></td>
-            <td>{{item.level}}</td>
-            <td>{{item.date}}</td>
-        </tr>
-        {% set num = num +1 %}
-        {% endfor %}
-        
-    </table> -->
-    
 </body>
 </html>
