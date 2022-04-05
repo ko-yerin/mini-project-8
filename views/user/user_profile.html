@@ -41,12 +41,10 @@
             </li>
         </ul>
         <button id="profile_update_btn"><a href="/user/update?userid={{content.userid}}">수정하기</a></button>
-        <div class="m_s_btn">   
-            <form method="post" action="/user/member_secession">
-                <input type="hidden" name="userid" value="{{content.userid}}">
-                <input type="submit" value="회원탈퇴">
-            </form>
-        </div>     
+        <form class="m_s_btn" method="post" action="/user/member_secession">
+            <input type="hidden" name="userid" value="{{content.userid}}">
+            <input type="submit" value="회원탈퇴">
+        </form>     
     </div>    
 </body>
 </html>
