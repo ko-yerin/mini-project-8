@@ -7,34 +7,36 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>
+    <h1 id="LOGO">
         <a href="/">LOGO</a>
     </h1>
-    <h2>
+    <h2 id="welcome_user">
         환영합니다 {{ content.username }} 님
     </h2>
-    <h4>
+    <h4 id="welcome_title">
         가입정보
     </h4>
-    <ul>
-        <li>
-            아이디: {{ content.userid }}
-        </li>
-        <li>
-            이름: {{ content.username }}
-        </li>
-        <li>
-            성별: {{ content.gender }}
-        </li>
-        <li>
-            이메일: {{ content.email }}
-        </li>
-        <li>
-             주소: {{ content.address }}
-        </li>
-        <li>
-            핸드폰번호: {{ content.tell }}
-        </li>
-    </ul>
+    <div class="user_welcome">
+        <ul>
+            <li>
+                아이디: {{ content.userid }}
+            </li>
+            <li>
+                이름: {{ content.username }}
+            </li>
+            <li>
+                성별: {{ content.gender }}
+            </li>
+            <li>
+                이메일: {{ content.email }}
+            </li>
+            <li>
+                주소: {{ content.address }}
+            </li>
+            <li>
+                핸드폰번호: {{ content.tell }}
+            </li>
+        </ul>
+    </div>
 </body>
 </html>

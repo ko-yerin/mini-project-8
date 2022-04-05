@@ -7,38 +7,46 @@
     <title>Document</title>
 </head>
 <body>
-    <h1><a href="/">LOGO</a></h1>
-    <h2>내프로필</h2>
-    <ul>
-        <li>
-            아이디 {{ content.userid }}
-        </li>
-        <li>
-            이름 {{ content.username }}
-        </li>
-        <li>
-            별명 {{ content.nickname }}
-        </li>
-        <li>
-            성별 {{ content.gender }}
-        </li>
-        <li>
-            주소 {{ content.address }}
-        </li>
-        <li>
-            이메일 {{ content.email }}
-        </li>
-        <li>
-            핸드폰번호 {{ content.tell }}
-        </li>
-        <li>
-            생년월일 {{ content.birth }}
-        </li>
-    </ul>
-    <button><a href="/user/update?userid={{content.userid}}">수정하기</a></button>
-    <form method="post" action="/user/member_secession">
-        <input type="hidden" name="userid" value="{{content.userid}}">
-        <input type="submit" value="회원탈퇴">
-    </form>
+    <h1 id="LOGO">
+        <a href="/">LOGO</a>
+    </h1>
+    <h2 id="profile_title">
+        내프로필
+    </h2>
+    <div class="user_profile">
+        <ul>
+            <li>
+                아이디 {{ content.userid }}
+            </li>
+            <li>
+                이름 {{ content.username }}
+            </li>
+            <li>
+                별명 {{ content.nickname }}
+            </li>
+            <li>
+                성별 {{ content.gender }}
+            </li>
+            <li>
+                주소 {{ content.address }}
+            </li>
+            <li>
+                이메일 {{ content.email }}
+            </li>
+            <li>
+                핸드폰번호 {{ content.tell }}
+            </li>
+            <li>
+                생년월일 {{ content.birth }}
+            </li>
+        </ul>
+        <button id="profile_update_btn"><a href="/user/update?userid={{content.userid}}">수정하기</a></button>
+        <div class="m_s_btn">   
+            <form method="post" action="/user/member_secession">
+                <input type="hidden" name="userid" value="{{content.userid}}">
+                <input type="submit" value="회원탈퇴">
+            </form>
+        </div>     
+    </div>    
 </body>
 </html>
