@@ -77,7 +77,49 @@ router.get('/userList',async(req,res)=>{
     }
 })
 
+
+router.get('/userUpdate',async(req,res)=>{
+    const userid = req.query.userid
+    console.log(userid)
+    const conn = await pool.getConnection();
+    try {
+       
+        const content = await conn.query(
+    
+            `SELECT * FROM user where userid=?`,[userid]
+        )
+        console.log(content[0])
+        res.render('admin/user_update',{content:content[0][0]})
+    } catch (error){
+        console.log(error)
+    } finally {
+        conn.release();
+    }
+})
+
 router.post('/userUpdate',async(req,res)=>{
+    const {userid,username,nickname,tell,gender,address,birth,email} = req.body
+    console.log("username : ", username)
+    const conn = await pool.getConnection();
+    try {     
+        const content = await conn.query( 
+            `UPDATE user 
+            set username = '${username}', nickname= '${nickname}',
+                tell = '${tell}',address = '${address}',
+                birth = '${birth}', email = '${email}'
+            where userid=?`,[userid]
+        )
+        console.log(content)
+        res.redirect('/admin/userList')
+    } catch (error){
+        console.log(error)
+    } finally {
+        conn.release();
+    }
+})
+
+
+router.post('/userLevelUpdate',async(req,res)=>{
     const {level,userid,active} = req.body
     console.log("level : ", level,userid)
     const conn = await pool.getConnection();
@@ -93,6 +135,23 @@ router.post('/userUpdate',async(req,res)=>{
         conn.release();
     }
 })
+
+router.post('/userActiveUpdate',async(req,res)=>{
+    const {userid,active} = req.body
+    const conn = await pool.getConnection();
+    try {     
+        const content = await conn.query( 
+            `UPDATE user set active=0 where userid=?`,[userid]
+        )
+        console.log(content)
+        res.redirect('/admin/userList')
+    } catch (error){
+        console.log(error)
+    } finally {
+        conn.release();
+    }
+})
+
 
 router.get('/userView',async (req,res)=>{
     const userid = req.query.userid
