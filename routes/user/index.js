@@ -150,16 +150,6 @@ router.post('/login', async (req, res) => {
     // res.redirect('/')
 })
 
-//로그인사용자 세션 삭제
-router.post('/', (req, res) => {
-    const userid = req.session.user.userid
-    req.session.destroy(() => {
-        req.session
-    });
-    res.send(alertmove('/','로그아웃 완료'))
-})
-//destroy method는 연결된 세션을 다 삭제하는 역할 !! 형태를 기억하자
-
 router.get('/profile', async (req, res) => {
     let userid = req.query.userid
     console.log(userid)
