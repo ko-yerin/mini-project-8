@@ -34,6 +34,7 @@ router.get('/',(req,res)=>{
 
 router.post('/',async(req,res)=>{
     const { userid, userpw } = req.body;
+    console.log("userlist session: " ,req.session.level)
     const conn = await pool.getConnection();
     try {
         const sql = `SELECT * FROM user WHERE userid = "${userid}" AND userpw = "${userpw}"`
@@ -56,7 +57,8 @@ router.post('/',async(req,res)=>{
 })   
 
 router.get('/userList',async(req,res)=>{
-    console.log("userlist session: " ,req.session)
+    // console.log("userlist session: " ,req.session.level)
+    // console.log(req.session.level)
     if(!req.session.admin) {
         res.send("로그인을 하세요")
         return
@@ -70,6 +72,7 @@ router.get('/userList',async(req,res)=>{
                     FROM user`
         )
         res.render('admin/user_list',{content})
+        // console.log()
     } catch (error){
         console.log(error)
     } finally {
