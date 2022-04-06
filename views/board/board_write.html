@@ -8,24 +8,26 @@
     <link href="/css/board/board_write.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-    <h1>
+    <h1 id="LOGO">
         <a href="/">logo</a>
     </h1>
-    <h2>글쓰기</h2>
-    <form method="post" action="/board/write">
-        <ul>
-            <li>
-                제목:<input type="text" name="subject">
-            </li>
-            <li>
-                작성자:<input type="text" name="nickname">
-            </li>
-            <li>
-                내용:<input type="content" name="story">
-            </li>
-        </ul>
-        <button><a href="/board/list">뒤로가기</a></button>
-        <input type="submit" value="글쓰기">
-    </form>
+    <h2 id="write_title">글쓰기</h2>
+    <div class="board_write">
+        <form method="post" action="/board/write">
+            <ul>
+                <li>
+                    제목:<input type="text" name="subject">
+                </li>
+                <li>
+                    작성자:<input type="text" name="nickname">
+                </li>
+                <li>
+                    내용:<input type="content" name="story">
+                </li>
+            </ul>
+            <button id="back_list_btn"><a href="/board/list">뒤로가기</a></button>
+            <input type="submit" value="글쓰기">
+        </form>
+    </div>  
 </body>
 </html>
