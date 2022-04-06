@@ -5,45 +5,80 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- <style>
+        .logout {
+            display: flex; 
+            justify-content: flex-end;
+        }
+        .user_table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th {
+            border: 0.5px solid #000;
+            background-color: #acc4b4;
+        }
+        .user_table td {
+            border: 0.5px solid rgb(85, 4, 85);
+            padding: 5px;
+        }
+    </style> -->
 </head>
 <body>
     <div>
         <div><a href="">관리자 회원관리</a></div>
     </div>
-    <div>
+    <div class="logout">
         <button><a href="/logout">로그아웃</a></button>
     </div>
     <div>
         <div><h1>회원 목록</h1></div>
     </div>
     <div> 
-        <table>
+        <table class="user_table">
             <tr>
-                <td>no.</td>
-                <td>이름</td>
-                <td>닉네임</td>
-                <td>성별</td>
-                <td>전화번호</td>
-                <td>Email</td>
-                <td>level</td>
-                <td>active</td>
+                <!-- <th></th> -->
+                <th>아이디</th>
+                <th>이름</th>
+                <th>닉네임</th>
+                <th>성별</th>
+                <th>전화번호</th>
+                <th>Email</th>
+                <th>level</th>
+                <th>active</th>
+                <th></th>
+                <th></th>
+                <th></th>
             </tr>
             {% for item in content %}
             <tr>
                 <form action="/admin/userLevelUpdate" method="post">
-                <td>{{item.idx}}</td>
-                <td><input name="userid" value="{{item.userid}}" style="display: none;"> 
-                    <a href="/admin/userView?userid={{item.userid}}">{{ item.username}}</a></td>
-                <td>{{item.nickname}}</td>
-                <td>{{item.gender}}</td>
-                <td>{{item.tell}}</td>
-                <td>{{item.email}}</td>
-                <td>{{item.level}}</td>
-                <td>{{item.active}}</td>
-                <td><select name="level"><option>3</option>
-                    <option>2</option></select></td>              
-                    <td><select name="active" ><option value="1" >활성화</option><option value="0">비활성화</option></select></td>
-                <td><button type="submit">저장</button></td> </form>
+                <!-- <td>{{item.idx}}</td> -->
+                    <td>{{item.userid}}</td>
+                    <td><input name="userid" value="{{item.userid}}" style="display: none;"> 
+                        <a href="/admin/userView?userid={{item.userid}}">{{ item.username}}</a></td>
+                    <td>{{item.nickname}}</td>
+                    <td>{{item.gender}}</td>
+                    <td>{{item.tell}}</td>
+                    <td>{{item.email}}</td>
+                    <td>{{item.level}}</td>
+                    <td>{{item.active}}</td>
+                    <td>
+                        <select name="level">
+                            <option value="2">관리자</option>
+                            <option value="3">회원</option>
+                        </select>
+                    </td>                     
+                    <td>
+                        <select name="active" >
+                            <option value="1" >활성화</option>
+                            <option value="0">비활성화</option>
+                        </select>
+                    </td>
+                    <td>
+                        <button type="submit">저장</button>
+                    </td> 
+               </form>
             </tr>
             {% endfor %}
         </table>
