@@ -10,7 +10,7 @@
     <div>
         <button><a href="/logout">로그아웃</a></button>
     </div>
-    <div><h1>회원 정보 보기</h1></div>
+    <div><h1>회원 정보 수정하기</h1></div>
     <form action="/admin/userUpdate" method="post">
         <span> 아이디: </span>
         <span><input type="text" name="userid" value="{{content.userid}}"></span><br/>
@@ -30,13 +30,17 @@
         <span><input type="text" name="email" value="{{content.email}}"></span><br>
     
     <div>
-        <input type ="submit" value="회원정보수정하기">
+        <input type ="submit" value="회원정보수정하기"> 
+        <input type ="submit" value= "회원리스트로 가기">
+        <!-- <button><a href="/admin/userView">뒤로가기</a></button> 이건안되고 인풋만 되고 리스트로 가지네 왜지? -->
     </form>
     <form action="/admin/userActiveUpdate" method="post">
         <input type="text" name="userid" value="{{content.userid}}" style="display:none;" />
         <input type="text" name="active" value="{{content.active}}" style="display:none;" />
         <input type="submit" value="활동중지" >
-    </form>        
+        
+    </form>    
+      
     
     </div>
 </body>
