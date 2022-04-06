@@ -12,12 +12,26 @@
     메인 routes에서 if문을 통해  userid가 undefined가 아니다라는 걸 밑에서 알수있도록 해주었다 -->
     {% if (userid !== undefined) %}
     <h1 id="LOGO">
-        <a href="/">LOGO</a>
+        <a href="/">
+            <img src="/public/img/짱구로고.png">
+        </a>
     </h1>
     <ul class="main">
-        <li><a href="/board/list"><button>게시판</a></li></button>
-        <li><a href="/user/profile?userid={{userid}}"><button>프로필</button></a></li>
-        <li><a href="/logout"><button>로그아웃</button></a></li>
+        <li>
+            <a href="/board/list">
+                <button class="a">게시판</button>
+            </a>
+        </li>
+        <li>
+            <a href="/user/profile?userid={{userid}}">
+                <button class="a">프로필</button>
+            </a>
+        </li>
+        <li>
+            <a href="/logout">
+                <button class="a">로그아웃</button>
+            </a>
+        </li>
     </ul>       
     <!-- 로그인전 -->
     {%  else %}
@@ -25,9 +39,20 @@
         <a href="/">LOGO</a>
     </h1>
     <ul class="main">
-        <li><a href="/user/join"><button>회원가입</button></a></li>
-        <li><a href="/user/login"><button>로그인</button></a></li>
-        <li><a href="/board/list"><button>게시판</a></li></button>
+        <li>
+            <a href="/user/join">
+                <button class="a">회원가입</button>
+            </a>
+        </li>
+        <li><a href="/user/login">
+            <button class="a">로그인</button>
+            </a>
+        </li>
+        <li>
+            <a href="/board/list">
+                <button class="a">게시판</button>
+            </a>
+        </li>
     </ul>
     {% endif %}
 </body>

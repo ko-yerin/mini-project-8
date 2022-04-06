@@ -82,11 +82,11 @@ router.get('/login', (req, res) => {
 })
 
 router.post('/login', async (req, res) => {
-    const { userid, userpw, } = { ...req.body }
+    const { userid, userpw, active } = { ...req.body }
     console.log('userid:', userid)
 
     try {
-        const sql = `SELECT * FROM user WHERE userid = '${userid}';`
+        const sql = `SELECT * FROM user WHERE userid = '${userid}','${active}';`
         const prepare = []
         const [result] = await pool.execute(sql, prepare)
         // console.log('로그인한값: ', userid, userpw)
@@ -103,7 +103,7 @@ router.post('/login', async (req, res) => {
             //mysql에 SELECT * FROM user WHERE userid = ''; 이렇게 쳐주니까 Empty set (0.01 sec) 이렇게 떳고
             //SELECT * FROM user WHERE userid = undefined; 이렇게 쳐주니  ERROR 1054 (42S22) 이렇게 떳다
             //즉 빈값은  오류가 아니기때문에  try로 가야된다
-            //그리고 아디,비번 확인후 입력 밑에 아디,비번입력해주세요를 적어주었더니 실행이 되지않아서 맨위로 옮겨주었다
+            //그리고 아디,비번 확인후 입력(아디,비번틀렷을경우) 밑에 아디,비번입력해주세요(빈값일경우)를 적어주었더니 실행이 되지않아서 맨위로 옮겨주었다
             // console.log('아이디 비번을 적어주세요')
             res.send(alertmove('/user/login', '아이디와 비번을 입력해주세요'))   //비번또는 아이디를 빈값으로 적은경우
         } else if (arrout.userid === userid && arrout.userpw === userpw) {
@@ -137,6 +137,9 @@ router.post('/login', async (req, res) => {
             //catch문에서는  아디, 비번둘다 또는 아디만 틀렸을경우는 작동을 하는데
             //비번만 틀린건 undefined가 아닌건지 작동이 안되서 여기에 코드를 입력해주었다
         }
+        // else if(active===0){
+        //     res.send(alertmove('/','이용중지된 회원입니다 관라자에게 문의하세요'))
+        // }
         // else if (arrout.userid !== userid && arrout.userpw !== userpw) {
         //     // console.log('아이디 비번 둘 다 틀림')
         //     res.send(alertmove('/user/login', '아이디 또는 비번을 확인후 다시 입력해주세요'))
