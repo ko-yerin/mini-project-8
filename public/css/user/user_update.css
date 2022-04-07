@@ -10,3 +10,8 @@ ul,li {
 a {
     text-decoration: none;
 }
+
+#LOGO > a > img{
+    float: left;
+    width: 200px;
+}
