@@ -3,10 +3,63 @@
     padding: 0;
 }
 
+body {
+    cursor: url('../foo510.cur'), auto;
+}
+
 ul,li{
     list-style:none;
 }
 
 a{
     text-decoration: none;
+}
+
+#LOGO > a > img {
+    width: 170px;
+}
+
+#list_title {
+    padding: 5px;
+    border:1px solid rgb(50, 168, 66);
+    border-width: 2px;
+    font-weight: bold;
+    color: rgb(86, 212, 118);
+    background-color: rgba(0,0,0,0);
+    border-top-left-radius: 5px; 
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.list_table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    border: 1px solid rgb(50, 168, 66);
+    background-color: #acc;
+}
+
+.list_table td {
+    border: 1px solid rgb(50, 168, 66);
+    padding: 5px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.write {
+    display: flex;
+    justify-content: flex-end;
 }
