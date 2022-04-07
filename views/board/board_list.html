@@ -8,32 +8,36 @@
     <link href="/css/board/board_list.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-    <h1 id="LOGO">
-        <a href="/">LOGO</a>
-    </h1>
-    <h2 id="list_title">
-        게시판 리스트
-    </h2>
-    <div>
-        <table class="list_table">
-            <tr>
-                <td>번호</td>
-                <td>제목</td>
-                <td>작성자</td>
-                <td>작성일</td>
-            </tr>
-            
-            {% for item in content %}
-            <!-- 이건 리스트처럼 반복문에만 쓰이는 거다!!!! -->
-            <tr>
-                <td>{{ item.idx }}</td>
-                <td><a href = "/board/view?idx={{item.idx}}">{{ item.subject }}</a></td>
-                <td>{{ item.nickname }}</td>
-                <td>{{ item. date }}</td>
-            </tr>
-            {% endfor %}
-        </table>
-        <button id="write_btn"><a href="/board/write">글쓰기</a></button>
-    </div>     
+    <div id="header">
+        <h1 id="LOGO">
+            <a href="/">LOGO</a>
+        </h1>
+        <h2 id="list_title">
+            게시판 리스트
+        </h2>
+        <div id="list">
+            <table class="list_table">
+                <tr>
+                    <th>번호</th>
+                    <th>제목</th>
+                    <th>작성자</th>
+                    <th>작성일</th>
+                </tr>
+                
+                {% for item in content %}
+                <!-- 이건 리스트처럼 반복문에만 쓰이는 거다!!!! -->
+                <tr>
+                    <td>{{ item.idx }}</td>
+                    <td><a href = "/board/view?idx={{item.idx}}">{{ item.subject }}</a></td>
+                    <td>{{ item.nickname }}</td>
+                    <td>{{ item. date }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+            <div class="write">
+                <button id="write_btn"><a href="/board/write">글쓰기</a></button>
+            </div> 
+        </div>   
+    </div> 
 </body>
 </html>
