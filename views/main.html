@@ -17,6 +17,9 @@
                 <img src="/img/짱구로고이거로.png">
             </a>
         </h1>
+        <h2 id="delivery">
+            <img src="/img/배송사진.png">
+        </h2>
         <ul class="main">
             <li>
                 <a href="/board/list">
@@ -41,6 +44,9 @@
                 <img src="/img/짱구로고이거로.png">
             </a>
         </h1>
+        <h2 id="delivery">
+            <img src="/img/배송사진.png">
+        </h2>
         <ul class="main">
             <li>
                 <a href="/user/join">
@@ -63,45 +69,86 @@
                 <li>
                     <img src="/img/짱구홈.jpg">
                 </li>
-                <li>
-                    <span class="menu_text">자체제작</span>
+                <li class="main_menu">
+                        신상품
+                <!-- 글자마다 다르게 padding을 지정해줘야되서 각각 class명을 지정해주고
+                css에서 각각 속성을 주었는데 겹치는 것도 있고 복잡해져서 
+                겹치는거 이외는 이렇게 각각  style로 html에서 속성을 줄수있다 -->
+                    <ul class="sub_menu" style="left: -50px;">
+                        <li><span>신상 5% 할인상품</span></li>
+                        <li><span>신상 10% 할인상품</span></li>
+                        <li><span>신상 15% 할인상품</span></li>
+                        <li><span>신상 20% 할인상품</span></li>
+                    </ul>    
                 </li>
             </ul>
             <ul>
                 <li>
                     <img src="/img/신상품.jpg">
                 </li>
-                <li>
-                    <span class="menu_text" style="padding-left:10px;">신상품</span>
+                <li class="main_menu" >문구류
+                    <ul class="sub_menu" style="left: -40px;">
+                        <li><span>필통</span></li>
+                        <li><span>노트</span></li>
+                        <li><span>스티커</span></li>
+                        <li><span>엽서</span></li>
+                    </ul>
                 </li>
-                <!-- 글자마다 다르게 padding을 지정해줘야되서 각각 class명을 지정해주고
-                css에서 각각 속성을 주었는데 겹치는 것도 있고 복잡해져서 
-                겹치는거 이외는 이렇게 각각  style로 html에서 속성을 줄수있다 -->
             </ul>
             <ul>
                 <li>
                     <img src="/img/재입고.jpg">
                 </li>
-                <li>
-                    <span class="menu_text text_leftPadding30">재입고</span>
-                </li>
+                <li class="main_menu text_leftPadding30">의류
                 <!--class명은 2개이상 사용가능하다 
                 ,로 구분하는게 아니라 띄어쓰기만 한다
                 css에서 변수처럼 지정한다음  html에서 갖다쓴거 
                 **글자마다 다르게 css를 지정해줘야해서 사용한 방법이다-->
+                    <ul class="sub_menu" style="left: -25px;">
+                        <li><span>티셔츠</span></li>
+                        <li><span>바지</span></li>
+                        <li><span>양말</span></li>
+                        <li><span>속옷</span></li>
+                    </ul>
+                </li>
             </ul>
             <ul>
                 <li>
                     <img src="/img/카테고리.jpg">
                 </li>
-                <li>
-                    <span class="menu_text" style="padding-left:-20px;">카테고리</span>
+                <li class="main_menu" style="padding-left:-40px;">장난감&취미
+                    <ul class="sub_menu" style="left: -35px;">
+                        <li><span>인형</span></li>
+                        <li><span>피규어</span></li>
+                        <li><span>퍼즐</span></li>
+                        <li><span>조립</span></li>
+                    </ul>
                 </li>
             </ul>
         </div>
     </div>
     <div id="main_content">
-
+        <form>
+            <input class="serch_box" type="text" placeholder="키워드를 입력하세요">
+            <input class="serch_btn" type="image" src="/img/검색바.jpg">
+        </form>
+        <ul id="slide">
+            <li>
+                <img src="/img/슬라이드1.jpg">
+            </li>
+            <li>
+                <img src="/img/슬라이드2.jpg">
+            </li>
+            <li>
+                <img src="/img/슬라이드3.jpg">
+            </li>
+            <li>
+                <img src="/img/슬라이드4.jpg">
+            </li>
+            <li>
+                <img src="/img/슬라이드5.jpg">
+            </li>
+        </ul>
     </div>
 </body>
 </html>
