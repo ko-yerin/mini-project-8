@@ -28,7 +28,7 @@ a{
 .main{
     display: flex;
     float: right;
-    padding: 50px 20px 0 0;
+    padding: 30px 20px 0 0;
     margin: -70px 10px 0 0;
 }
 
@@ -117,7 +117,26 @@ a{
     display: flex;
 }
 
-#slide > li > img{
-    width: 200px;
+#slide_main {
+    display:flex;
+}
+
+#slide_main > img:nth-child(1){
+    margin-top: 100px;
+    width: 600px;
+    height: 400px;
+}
+
+#slide_main > img:nth-child(2){
+    align-items: center;
+    /* position: absolute; */
+    
+    /* bottom: 0; */
+    /* right: -22px; */
+    margin: auto;
+    /* transform: rotate(180deg); */
+    padding: 15px 20px;
+    border-radius: 50%;
+
 }
 
