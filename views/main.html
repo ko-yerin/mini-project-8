@@ -8,53 +8,101 @@
     <link href="/css/main/main.css" rel="stylesheet" type="text/css">
 </head>
 <body>
+    <div id="header">
     <!-- 로그인후 
     메인 routes에서 if문을 통해  userid가 undefined가 아니다라는 걸 밑에서 알수있도록 해주었다 -->
-    {% if (userid !== undefined) %}
-    <h1 id="LOGO">
-        <a href="/">
-            <img src="/public/img/짱구로고.png">
-        </a>
-    </h1>
-    <ul class="main">
-        <li>
-            <a href="/board/list">
-                <button class="a">게시판</button>
+        {% if (userid !== undefined) %}
+        <h1 id="LOGO">
+            <a href="/">
+                <img src="/img/짱구로고이거로.png">
             </a>
-        </li>
-        <li>
-            <a href="/user/profile?userid={{userid}}">
-                <button class="a">프로필</button>
+        </h1>
+        <ul class="main">
+            <li>
+                <a href="/board/list">
+                    <button class="a">게시판</button>
+                </a>
+            </li>
+            <li>
+                <a href="/user/profile?userid={{userid}}">
+                    <button class="a">프로필</button>
+                </a>
+            </li>
+            <li>
+                <a href="/logout">
+                    <button class="a">로그아웃</button>
+                </a>
+            </li>
+        </ul>       
+        <!-- 로그인전 -->
+        {%  else %}
+        <h1 id="LOGO">
+            <a href="/">
+                <img src="/img/짱구로고이거로.png">
             </a>
-        </li>
-        <li>
-            <a href="/logout">
-                <button class="a">로그아웃</button>
-            </a>
-        </li>
-    </ul>       
-    <!-- 로그인전 -->
-    {%  else %}
-    <h1 id="LOGO">
-        <a href="/">LOGO</a>
-    </h1>
-    <ul class="main">
-        <li>
-            <a href="/user/join">
-                <button class="a">회원가입</button>
-            </a>
-        </li>
-        <li><a href="/user/login">
-            <button class="a">로그인</button>
-            </a>
-        </li>
-        <li>
-            <a href="/board/list">
-                <button class="a">게시판</button>
-            </a>
-        </li>
-    </ul>
-    {% endif %}
+        </h1>
+        <ul class="main">
+            <li>
+                <a href="/user/join">
+                    <button class="a">회원가입</button>
+                </a>
+            </li>
+            <li><a href="/user/login">
+                <button class="a">로그인</button>
+                </a>
+            </li>
+            <li>
+                <a href="/board/list">
+                    <button class="a">게시판</button>
+                </a>
+            </li>
+        </ul>
+        {% endif %}
+        <div id="menu">
+            <ul>
+                <li>
+                    <img src="/img/짱구홈.jpg">
+                </li>
+                <li>
+                    <span class="menu_text">자체제작</span>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <img src="/img/신상품.jpg">
+                </li>
+                <li>
+                    <span class="menu_text" style="padding-left:10px;">신상품</span>
+                </li>
+                <!-- 글자마다 다르게 padding을 지정해줘야되서 각각 class명을 지정해주고
+                css에서 각각 속성을 주었는데 겹치는 것도 있고 복잡해져서 
+                겹치는거 이외는 이렇게 각각  style로 html에서 속성을 줄수있다 -->
+            </ul>
+            <ul>
+                <li>
+                    <img src="/img/재입고.jpg">
+                </li>
+                <li>
+                    <span class="menu_text text_leftPadding30">재입고</span>
+                </li>
+                <!--class명은 2개이상 사용가능하다 
+                ,로 구분하는게 아니라 띄어쓰기만 한다
+                css에서 변수처럼 지정한다음  html에서 갖다쓴거 
+                **글자마다 다르게 css를 지정해줘야해서 사용한 방법이다-->
+            </ul>
+            <ul>
+                <li>
+                    <img src="/img/카테고리.jpg">
+                </li>
+                <li>
+                    <span class="menu_text" style="padding-left:-20px;">카테고리</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="main_content">
+
+    </div>
 </body>
 </html>
 

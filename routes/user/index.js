@@ -82,11 +82,11 @@ router.get('/login', (req, res) => {
 })
 
 router.post('/login', async (req, res) => {
-    const { userid, userpw, active } = { ...req.body }
+    const { userid, userpw } = { ...req.body }
     console.log('userid:', userid)
 
     try {
-        const sql = `SELECT * FROM user WHERE userid = '${userid}','${active}';`
+        const sql = `SELECT * FROM user WHERE userid = '${userid}';`
         const prepare = []
         const [result] = await pool.execute(sql, prepare)
         // console.log('로그인한값: ', userid, userpw)
