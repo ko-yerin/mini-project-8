@@ -72,7 +72,6 @@ router.get('/userList',async(req,res)=>{
                     FROM user`
         )
         res.render('admin/user_list',{content})
-        // console.log()
     } catch (error){
         console.log(error)
     } finally {

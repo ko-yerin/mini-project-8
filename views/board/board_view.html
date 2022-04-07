@@ -8,26 +8,29 @@
     <link href="/css/board/board_view.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-    <ul><h2>글보기</h2>
-        <li>
-            <span>글번호:</span>
-            <span>{{ view_db.idx }}</span>
-        </li>
-        <li>
-            <span>글제목:</span>
-            <span>{{ view_db.subject }}</span>
-        </li>
-        <li>
-            <span>작성자:</span>
-            <span>{{ view_db.nickname }}</span>
-        </li>
-        <li>
-            <span>내용:</span>
-            <span>{{ view_db.story }}</span>
-        </li>
-    </ul>
-    <button><a href="/board/list">목록으로 돌아가기</a></button>
-    <button><a href="/board/update?idx={{view_db.idx}}">글수정하기</a></button>
-    <button><a href="/board/delete?idx={{view_db.idx}}">글삭제하기</a></button>
+    <h2 id="view_title">글보기</h2>
+    <div class="board_view">
+        <ul>
+            <li>
+                <span>글번호:</span>
+                <span>{{ view_db.idx }}</span>
+            </li>
+            <li>
+                <span>글제목:</span>
+                <span>{{ view_db.subject }}</span>
+            </li>
+            <li>
+                <span>작성자:</span>
+                <span>{{ view_db.nickname }}</span>
+            </li>
+            <li>
+                <span>내용:</span>
+                <span>{{ view_db.story }}</span>
+            </li>
+        </ul>
+        <button id="back_list_btn"><a href="/board/list">목록으로 돌아가기</a></button>
+        <button id="write_update_btn"><a href="/board/update?idx={{view_db.idx}}">글수정하기</a></button>
+        <button id="wirte_del_btn"><a href="/board/delete?idx={{view_db.idx}}">글삭제하기</a></button>
+    </div>
 </body>
 </html>
