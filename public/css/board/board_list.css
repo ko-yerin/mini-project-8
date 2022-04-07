@@ -15,8 +15,9 @@ a{
     text-decoration: none;
 }
 
-#LOGO > a > img {
-    width: 170px;
+#LOGO > a > img{
+    float: left;
+    width: 200px;
 }
 
 #list_title {
@@ -47,15 +48,6 @@ th {
     padding: 5px;
 
 }
-
-
-
-
-
-
-
-
-
 
 
 
