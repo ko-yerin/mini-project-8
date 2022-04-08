@@ -10,9 +10,9 @@
 <body>
     <div id="wrap">
         <div class="logout">
-            <button><a href="/logout">로그아웃</a></button>
+            <button><a href="/logout">ログアウト</a></button>
         </div>
-        <div><h1 id="user_info">회원 정보 보기</h1></div>
+        <div><h1 id="user_info">見る</h1></div>
         <div class="user_info_list">
             <span> 아이디 : </span>
             <span><input type="text" name="" id="" value="{{content.userid}}"></span><br/>
@@ -31,10 +31,10 @@
             <span> 이메일 : </span>
             <span><input type="text" name="" id="" value="{{content.email}}"></span><br/>
             <button id="user_list_btn">
-                <a href="/admin/userList">회원목록으로 돌아가기</a>
+                <a href="/admin/userList">リスト</a>
             </button>
             <button id="user_update_btn">
-                <a href="/admin/userUpdate?userid={{content.userid}}">수정하기로 가기</a>
+                <a href="/admin/userUpdate?userid={{content.userid}}">修正</a>
             </button>
         </div>
     </div>
