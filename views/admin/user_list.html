@@ -30,8 +30,8 @@
         <div>
             <div><a href="">관리자 회원관리</a></div>
         </div>
-        <div class="logout">
-            <button><a href="/logout">로그아웃</a></button>
+        <div id="logout_group">
+            <button id="logout_btn"><a href="/logout">로그아웃</a></button>
         </div>
         <div>
             <div><h1 id="user_list">회원 목록</h1></div>
@@ -79,7 +79,9 @@
                             </select>
                         </td>
                         <td>
-                            <button type="submit">저장</button>
+                            <div id="btn_group">
+                                <button id="edit_btn" type="submit">저장</button>
+                            </div>
                         </td> 
                 </form>
                 </tr>
