@@ -230,7 +230,7 @@ a{
 }
 
 #plus > ul >li{
-    width: 150px;
+    width: 230px;
     padding-top: 15px;
     left: 500px;
     border-top: 1px solid rgb(230, 240, 226);
@@ -269,17 +269,23 @@ a{
 }
 
 #guide{
-
+    display: flex;
 }
 
 #delivery_fee{
+    width: 330px;
+    height: 380px;
     background-color: #ffffff
 }
 
 #money{
+    width: 330px;
+    height: 380px;
     background-color: #ffffff
 }
 
 #time{
+    width: 330px;
+    height: 380px;
     background-color: #ffffff
 }

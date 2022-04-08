@@ -39,17 +39,17 @@
         <div class="main_content"> 
             <table class="user_table">
                 <tr>
-                    <th>아이디</th>
-                    <th>이름</th>
-                    <th>닉네임</th>
-                    <th>성별</th>
-                    <th>전화번호</th>
-                    <th>주소</th>
+                    <th>ID</th>
+                    <th>名前</th>
+                    <th>ニックネーム</th>
+                    <th>性別</th>
+                    <th>携帯番号</th>
+                    <th>住所</th>
                     <th>Email</th>
                     <th>level</th>
                     <th>active</th>
-                    <th>레벨설정</th>
-                    <th>활동중지</th>
+                    <th>レベル設定</th>
+                    <th>活動停止</th>
                     <th></th>
                 </tr>
                 {% for item in content %}
@@ -68,14 +68,14 @@
                         <td>{{item.active}}</td>
                         <td>
                             <select name="level">
-                                <option value="2">관리자</option>
-                                <option value="3">회원</option>
+                                <option value="2">管理者</option>
+                                <option value="3">会員</option>
                             </select>
                         </td>                     
                         <td>
                             <select name="active" >
-                                <option value="1" >활성화</option>
-                                <option value="0">비활성화</option>
+                                <option value="1" >活性化</option>
+                                <option value="0">非活性化</option>
                             </select>
                         </td>
                         <td>
