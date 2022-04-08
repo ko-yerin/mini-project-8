@@ -15,30 +15,8 @@ a {
     text-decoration: none;
 }
 
-.logout>a {
-    padding: 5px;
-    border:1px solid rgb(50, 168, 66);
-    border-width: 2px;
-    font-weight: bold;
-    color: rgb(86, 212, 118);
-    background-color: rgba(0,0,0,0);
-    border-top-left-radius: 5px; 
-    border-top-right-radius: 5px;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-
+#wrap {
+    width: 100%;
+    height: 675px;
+    background-image: url('/img/짱구대표배경.png');
 }
-
-/* .a {
-    padding: 5px;
-    border:1px solid rgb(50, 168, 66);
-    border-width: 2px;
-    font-weight: bold;
-    color: rgb(86, 212, 118);
-    background-color: rgba(0,0,0,0);
-    border-top-left-radius: 5px; 
-    border-top-right-radius: 5px;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-
-} */
