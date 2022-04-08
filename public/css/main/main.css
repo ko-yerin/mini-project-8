@@ -94,11 +94,12 @@ a{
 
 #main_content{
     width: 100%;
-    height: 675px;
+    height: 505px;
+    padding-top: 70px;
     background-image:url('/img/짱구배경.gif');
 }
 
-#main_content > form{
+#main_serching > form{
     display: flex;
     float: right;
     /* padding: 0 10px 0 0px; */
@@ -107,6 +108,9 @@ a{
 
 .serch_box{
     /* float: right; */
+    /* position: absolute; */
+    /* padding-top: 10px; */
+    /* padding-right: 50px; */
     padding: 0 0 0 15px;
     width: 200px;
     height: 40px;
@@ -115,6 +119,7 @@ a{
 
 #slide{
     display: flex;
+    transition: all ease 2s 0s;
 }
 
 #slide_main {
@@ -122,21 +127,71 @@ a{
 }
 
 #slide_main > img:nth-child(1){
-    margin-top: 100px;
+    margin-top: 70px;
+    margin:auto;
     width: 600px;
     height: 400px;
 }
 
-#slide_main > img:nth-child(2){
+#slide_btn > li > button{
+    display: flex;
+    justify-content: space-between;
+    float: right;
+    cursor: pointer;
+    /* width: 140px; */
+    margin: 5px;
+    /* margin: auto;  */
+    padding: 8px 10px;
+    height: 40px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    box-shadow: 0 0 8px rgb(0 0 0 /50%);
+    color: #000;
+    background-color: #fff;
+    border: 2px solid rgba(4, 114, 46, 0.521);
+    border-radius: 45px;
+    /* box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1); */
+    transition: all 0.3s ease 0s;
+    /* cursor: pointer; */
+    /* outline: none; */
+}
+
+#slide_btn > li > button:hover{
+    background-color: #095c324b;
+    box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
+}
+
+.btn1{
+    /* align-items: center; */
+    height: 25px;
+}
+
+.btn2{
+    /* align-items: center; */
+    height: 25px;
+}
+
+/* #slide_main > button > img{
+    position: relative;
+} */
+
+/* #slide_main > img:nth-child(2){
+    cursor: pointer;
     align-items: center;
-    /* position: absolute; */
-    
-    /* bottom: 0; */
-    /* right: -22px; */
     margin: auto;
-    /* transform: rotate(180deg); */
     padding: 15px 20px;
     border-radius: 50%;
+} */
+
+#second_content{
+    width: 100%;
+    height: 740px;
+    background-image: url('/img/짱구야 배경.gif');
 
 }
 
