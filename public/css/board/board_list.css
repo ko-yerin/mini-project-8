@@ -5,6 +5,8 @@
 
 body {
     cursor: url('../foo510.cur'), auto;
+    background-image: url('/img/짱구대표배경.png');
+    
 }
 
 ul,li{
@@ -21,14 +23,17 @@ a{
 }
 
 #wrap {
-    width: 100%;
+    width: 60%;
     height: 675px;
-    background-image: url('/img/짱구대표배경.png');
+    /* background-image: url('/img/짱구대표배경.png'); */
+    background-color: #ffffff;
+    margin:0 auto
+   
 }
 
 #list_title {
-    padding: 5px;
-    border:1px solid rgb(50, 168, 66);
+    padding: 10px;
+    /* border:1px  rgb(50, 168, 66); */
     border-width: 2px;
     font-weight: bold;
     color: rgb(86, 212, 118);
@@ -37,6 +42,11 @@ a{
     border-top-right-radius: 5px;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
+}
+
+#main_content {
+    width: 80%;
+    margin:0 auto
 }
 
 .list_table {
@@ -55,9 +65,38 @@ th {
 
 }
 
+#write_btn {
+    /* margin: -4px;display: flex;
+    float: right;
+    padding: 30px 20px 0 0;
+    margin: -70px 10px 0 0; */
+    margin: 12px;
+}
+
+#write_btn>a {
+    color: rgb(86, 212, 118);
+}
+
+#btn_group> button {
+    padding: 5px;
+    border: 1px solid rgb(50, 168, 66);
+    border-width: 2px;
+    font-weight: bold;
+    color: rgb(86, 212, 118);
+    /* 박스 안에 채워지는 색깔 */
+    background-color: rgba(0, 0, 0, 0);
+    border-top-left-radius: 5px; 
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
 
 
-.write {
-    display: flex;
-    justify-content: flex-end;
+#btn_group> button:hover {
+    background-color: rgb(74, 139, 114);
+    /* color:white; */
+}
+
+#btn_group button:hover a {
+    color: white;
 }
