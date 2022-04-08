@@ -23,17 +23,17 @@
         <ul class="main">
             <li>
                 <a href="/board/list">
-                    <button class="a">게시판</button>
+                    <button class="a">掲示板</button>
                 </a>
             </li>
             <li>
                 <a href="/user/profile?userid={{userid}}">
-                    <button class="a">프로필</button>
+                    <button class="a">プロフィール</button>
                 </a>
             </li>
             <li>
                 <a href="/logout">
-                    <button class="a">로그아웃</button>
+                    <button class="a">ログアウト</button>
                 </a>
             </li>
         </ul>       
@@ -50,16 +50,16 @@
         <ul class="main">
             <li>
                 <a href="/user/join">
-                    <button class="a">회원가입</button>
+                    <button class="a">会員登録</button>
                 </a>
             </li>
             <li><a href="/user/login">
-                <button class="a">로그인</button>
+                <button class="a">ログイン</button>
                 </a>
             </li>
             <li>
                 <a href="/board/list">
-                    <button class="a">게시판</button>
+                    <button class="a">掲示板</button>
                 </a>
             </li>
         </ul>
@@ -70,15 +70,15 @@
                     <img src="/img/짱구홈.jpg">
                 </li>
                 <li class="main_menu">
-                        신상품
+                    新商品
                 <!-- 글자마다 다르게 padding을 지정해줘야되서 각각 class명을 지정해주고
                 css에서 각각 속성을 주었는데 겹치는 것도 있고 복잡해져서 
                 겹치는거 이외는 이렇게 각각  style로 html에서 속성을 줄수있다 -->
                     <ul class="sub_menu" style="left: -50px;">
-                        <li><span>신상 5% 할인상품</span></li>
-                        <li><span>신상 10% 할인상품</span></li>
-                        <li><span>신상 15% 할인상품</span></li>
-                        <li><span>신상 20% 할인상품</span></li>
+                        <li><span>新製品 5% 割引商品</span></li>
+                        <li><span>新製品 10% 割引商品</span></li>
+                        <li><span>新製品 15% 割引商品</span></li>
+                        <li><span>新製品 20% 割引商品</span></li>
                     </ul>    
                 </li>
             </ul>
@@ -86,12 +86,12 @@
                 <li>
                     <img src="/img/신상품.jpg">
                 </li>
-                <li class="main_menu" >문구류
+                <li class="main_menu" >ステーショナリー
                     <ul class="sub_menu" style="left: -40px;">
-                        <li><span>필통</span></li>
-                        <li><span>노트</span></li>
-                        <li><span>스티커</span></li>
-                        <li><span>엽서</span></li>
+                        <li><span>筆痛</span></li>
+                        <li><span>ノート</span></li>
+                        <li><span>ステッカー</span></li>
+                        <li><span>はがき</span></li>
                     </ul>
                 </li>
             </ul>
@@ -99,16 +99,16 @@
                 <li>
                     <img src="/img/재입고.jpg">
                 </li>
-                <li class="main_menu text_leftPadding30">의류
+                <li class="main_menu text_leftPadding30">アパレル
                 <!--class명은 2개이상 사용가능하다 
                 ,로 구분하는게 아니라 띄어쓰기만 한다
                 css에서 변수처럼 지정한다음  html에서 갖다쓴거 
                 **글자마다 다르게 css를 지정해줘야해서 사용한 방법이다-->
                     <ul class="sub_menu" style="left: -25px;">
-                        <li><span>티셔츠</span></li>
-                        <li><span>바지</span></li>
-                        <li><span>양말</span></li>
-                        <li><span>속옷</span></li>
+                        <li><span>シャツ</span></li>
+                        <li><span>ズボン</span></li>
+                        <li><span>靴下</span></li>
+                        <li><span>下着</span></li>
                     </ul>
                 </li>
             </ul>
@@ -116,12 +116,12 @@
                 <li>
                     <img src="/img/카테고리.jpg">
                 </li>
-                <li class="main_menu" style="padding-left:-40px;">장난감&취미
+                <li class="main_menu" style="padding-left:-40px;">おもちゃ・ホビー
                     <ul class="sub_menu" style="left: -35px;">
-                        <li><span>인형</span></li>
-                        <li><span>피규어</span></li>
-                        <li><span>퍼즐</span></li>
-                        <li><span>조립</span></li>
+                        <li><span>人形</span></li>
+                        <li><span>フィギュア</span></li>
+                        <li><span>パズル</span></li>
+                        <li><span>組み立て</span></li>
                     </ul>
                 </li>
             </ul>
@@ -129,7 +129,7 @@
     </div>
     <div id="main_serching">
         <form>
-            <input class="serch_box" type="text" placeholder="키워드를 입력하세요">
+            <input class="serch_box" type="text" placeholder="キーワードを入力してください">
             <input class="serch_btn" type="image" src="/img/검색바.jpg">
         </form>
     </div>
@@ -155,7 +155,109 @@
         </ul>    
     </div>
     <div id="second_content">
-
+        <div id="content_1">
+            <div id="welcome">
+                <p>
+                    <img src="/img/환영.png" style="width: 100%;">
+                </p>
+                <p class="wel">ようこそ！</p>
+                <p class="wel">ゲスト様</p>
+            </div>
+            <div id="category">
+                <img src="/img/그냥.png">
+            </div>
+            <div id="plus">
+                <ul>
+                    <li>
+                        <img src="/img/신제품.png">新着商品
+                    </li>
+                    <li>
+                        <img src="/img/재입고.png">再入荷商品
+                    </li>
+                    <li>
+                        <img src="/img/추천.png">おすすめ商品
+                    </li>
+                    <li>
+                        <img src="/img/히트.png">売れ筋商品
+                    </li>
+                    <li>
+                        <img src="/img/인형.png">ぬいぐるみ・マスコット
+                    </li>
+                    <li>
+                        <img src="/img/의류.png">アパレル
+                    </li>
+                    <li>
+                        <img src="/img/문구.png">ステーショナリー
+                    </li>
+                    <li>
+                        <img src="/img/책.png">本・DVD
+                    </li>
+                    <li>
+                        <img src="/img/장난감.png">おもちゃ・ホビー
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="content_2">
+            <div id="recommend" style="margin-top: 100px; padding-left: 50px;"  >
+                    <img src="/img/권유.png">
+            </div>
+            <div id="product" style="margin-top:30px">
+                <div id="goods" style="padding-left:60px">
+                    <img src="/img/짱구가방.jpg">ラバーキーホルダー パジャマしんちゃん 880円
+                    <img src="/img/짱구그릇.jpg">クレヨンしんちゃん食器セット 3,080 円
+                    <img src="/img/짱구물.jpg">プスライト(軽減税率8%)  302 円
+                </div>
+                <div id="goods">
+                    <img src="/img/짱구밥그릇.jpg">ラバーキーホルダー しんちゃん2 880円
+                    <img src="/img/짱구시계.jpg">目覚まし時計 アクション仮面  3,850 円
+                    <img src="/img/짱구에코백.jpg">クレヨンしんちゃん本舗 グッディバッグ コマ 1,760円
+                </div>
+                <div id="goods">
+                    <img src="/img/짱구파우치.jpg">パックンポーチ しんちゃん 990円
+                    <img src="/img/짱구피규어.png">すやすやオン・ザ・ケーブル  638円
+                    <img src="/img/짱구휴지깍.jpg">メッシュマスクポーチ 638円
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+        <div><img src="/img/야.png"></div>
+        <div id="guide">
+            <div id="delivery_fee">
+                <h2>送料について</h2>
+                <p>配送業者：佐川急便</p>
+                <p>全国一律550円（税込）</p>
+                <p>
+                    ※北海道の離島・沖縄⇒地域料700円を加算
+                    ※個別送料指定商品を除く
+                </p>
+                <p>5,500円(税込)以上送料無料
+                    ※一部メーカー直送品は、各メーカーの配送業者に準じます。
+                </p>
+            </div>   
+            <div id="money">
+                <h2>お支払い方法</h2>
+                <p>クレジットカード決済・代金引換決済をご利用になれます。
+                    詳しくはお支払いについてをご参照ください。</p>
+                <p>クレジットカード</p>
+                <img src="/img/카드정보.png">
+                <p>
+                    代金引換（現金決済のみ・代引き手数料330円）
+                </p>
+            </div>    
+            <div id="time">
+                <h2>配送について</h2>
+                <p>ご注文から3～5日（休業日除く）ほど出荷までにお時間を要する場合があります。
+                    余裕を持ってご注文ください。
+                </p>
+                <p>また現在はラッピングは承っておりませんのでご了承ください。</p>
+                <p>
+                    ※詳しくは配送・送料についてをご参照ください。
+                    ※ご注文の混雑状況などにより、多少前後する場合がございます。
+                </p>
+            </div>   
+        </div>
     </div>
 </body>
 <script type="text/javascript" src="/js/main.js">

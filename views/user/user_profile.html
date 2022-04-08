@@ -20,34 +20,34 @@
         <div class="user_profile">
             <ul>
                 <li>
-                    아이디 {{ content.userid }}
+                    ID: {{ content.userid }}
                 </li>
                 <li>
-                    이름 {{ content.username }}
+                    名前: {{ content.username }}
                 </li>
                 <li>
-                    별명 {{ content.nickname }}
+                    ニックネーム: {{ content.nickname }}
                 </li>
                 <li>
-                    성별 {{ content.gender }}
+                    性別: {{ content.gender }}
                 </li>
                 <li>
-                    주소 {{ content.address }}
+                    住所: {{ content.address }}
                 </li>
                 <li>
-                    이메일 {{ content.email }}
+                    email: {{ content.email }}
                 </li>
                 <li>
-                    핸드폰번호 {{ content.tell }}
+                    携帯番号: {{ content.tell }}
                 </li>
                 <li>
-                    생년월일 {{ content.birth }}
+                    生年月日: {{ content.birth }}
                 </li>
             </ul>
-            <button id="profile_update_btn"><a href="/user/update?userid={{content.userid}}">수정하기</a></button>
+            <button id="profile_update_btn"><a href="/user/update?userid={{content.userid}}">修正</a></button>
             <form class="m_s_btn" method="post" action="/user/member_secession">
                 <input type="hidden" name="userid" value="{{content.userid}}">
-                <input type="submit" value="회원탈퇴">
+                <input type="submit" value="会員脱退">
             </form>     
         </div>   
     </div> 

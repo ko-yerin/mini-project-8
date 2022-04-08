@@ -14,22 +14,22 @@
                 <img src="/img/짱구로고이거로.png">
             </a>
         </h1>
-        <h2 id="write_title">글쓰기</h2>
+        <h2 id="write_title">書く</h2>
         <div class="board_write">
             <form method="post" action="/board/write">
                 <ul>
                     <li>
-                        제목:<input type="text" name="subject">
+                        タイトル:<input type="text" name="subject" placeholder="제목을 적어주세요">
                     </li>
                     <li>
-                        작성자:<input type="text" name="nickname">
+                        作者:<input type="text" name="nickname" placeholder="이름을 적어주세요">
                     </li>
                     <li>
-                        내용:<input type="content" name="story">
+                        内容:<input type="content" name="story" placeholder="내용을 적어주세요">
                     </li>
                 </ul>
-                <button id="back_list_btn"><a href="/board/list">뒤로가기</a></button>
-                <input type="submit" value="글쓰기">
+                <button id="back_list_btn"><a href="/board/list">以前</a></button>
+                <input type="submit" value="書く">
             </form>
         </div>  
     </div>
