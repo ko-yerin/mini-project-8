@@ -8,40 +8,40 @@
     <link href="/css/admin/user_update.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-    <div class="logout">
-        <button calss="a"><a href="/logout">로그아웃</a></button>
-    </div>
-    <div><h1>회원 정보 수정하기</h1></div>
-    <div class="user info">
-        <form action="/admin/userUpdate" method="post">
-            <span> 아이디: </span>
-            <span><input type="text" name="userid" value="{{content.userid}}"></span><br/>
-            <span> 이름 : </span>
-            <span><input type="text" name="username" value="{{content.username}}"></span><br/>
-            <span> 닉네임: </span>
-            <span><input type="text" name="nickname" value="{{content.nickname}}"></span><br/>
-            <span>성별: </span>
-            <span><input type="text" name="gender" value="{{content.gender}}"></span><br>
-            <span> 전화번호: </span>
-            <span><input type="text" name="tell" value="{{content.tell}}"></span><br/>
-            <span>주소: </span>
-            <span><input type="text" name="address" value="{{content.address}}"></span><br>
-            <span>생년월일: </span>
-            <span><input type="text" name="birth" value="{{content.birth}}"></span><br>
-            <span>이메일: </span>
-            <span><input type="text" name="email" value="{{content.email}}"></span><br>
-    </div>
-    <div>
-        <input class="userinfo_edit_btn" type ="submit" value="회원정보수정하기"> 
-        <input class="user_list_go" type ="submit" value= "회원리스트로 가기">
-        <!-- <button><a href="/admin/userView">뒤로가기</a></button> 이건안되고 인풋만 되고 리스트로 가지네 왜지? -->
-        </form>
-        <form action="/admin/userActiveUpdate" method="post">
-            <input type="text" name="userid" value="{{content.userid}}" style="display:none;" />
-            <input type="text" name="active" value="{{content.active}}" style="display:none;" />
-            <input class="active_stop_btn" type="submit" value="활동중지" >
-            
-        </form>    
+    <div id="wrap"> 
+        <div class="logout">
+            <button calss="a"><a href="/logout">로그아웃</a></button>
+        </div>
+        <div><h1>회원 정보 수정하기</h1></div>
+        <div class="user_info">
+            <form action="/admin/userUpdate" method="post">
+                <span> 아이디: </span>
+                <span><input type="text" name="userid" value="{{content.userid}}"></span><br/>
+                <span> 이름 : </span>
+                <span><input type="text" name="username" value="{{content.username}}"></span><br/>
+                <span> 닉네임: </span>
+                <span><input type="text" name="nickname" value="{{content.nickname}}"></span><br/>
+                <span>성별: </span>
+                <span><input type="text" name="gender" value="{{content.gender}}"></span><br>
+                <span> 전화번호: </span>
+                <span><input type="text" name="tell" value="{{content.tell}}"></span><br/>
+                <span>주소: </span>
+                <span><input type="text" name="address" value="{{content.address}}"></span><br>
+                <span>생년월일: </span>
+                <span><input type="text" name="birth" value="{{content.birth}}"></span><br>
+                <span>이메일: </span>
+                <span><input type="text" name="email" value="{{content.email}}"></span><br>
+
+                <input class="userinfo_edit_btn" type ="submit" value="회원정보수정하기"> 
+            <input class="user_list_go" type ="submit" value= "회원리스트로 가기">
+            <!-- <button><a href="/admin/userView">뒤로가기</a></button> 이건안되고 인풋만 되고 리스트로 가지네 왜지? -->
+            </form>
+            <form action="/admin/userActiveUpdate" method="post">
+                <input type="text" name="userid" value="{{content.userid}}" style="display:none;" />
+                <input type="text" name="active" value="{{content.active}}" style="display:none;" />
+                <input class="active_stop_btn" type="submit" value="활동중지" >
+            </form>  
+        </div>
     </div>
 </body>
 </html>
