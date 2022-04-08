@@ -10,24 +10,24 @@
 <body>
     <div id="wrap">
         <h2 id="update_title">
-            글수정하기
+            修正
         </h2>
         <div id="main_content">
             <div class="board_update_text">
                 <form method="post" action="/board/update">
-                    <span>글번호</span>
+                    <span>番号</span>
                     <input type="text" name="idx" value="{{ update_db.idx }}" readonly><br/>
                     <br/>
-                    <span>제목</span>
+                    <span>タイトル</span>
                     <input type="text" name="subject" value="{{ update_db.subject }}"><br/>
                     <br/>
-                    <span>작성자</span>
+                    <span>作者</span>
                     <input type="text" name="nickname" value="{{ update_db.nickname }}"><br/>
                     <br/>
-                    <span>내용</span>
+                    <span>内容</span>
                     <input type="text" name="story" value="{{ update_db.story }}"><br/>
-                    <button id="back_list_btn"><a href="/board/list">뒤로가기</a></button>
-                    <input type="submit" value="글수정완료">
+                    <button id="back_list_btn"><a href="/board/list">以前</a></button>
+                    <input type="submit" value="修正">
                 </form>
             </div>
         </div>

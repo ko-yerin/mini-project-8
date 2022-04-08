@@ -15,28 +15,28 @@
             </a>
         </h1>
         <h2 id="update_title">
-            내정보 수정하기
+            プロフィール 修正
         </h2>
         <div class="user_update">
             <form method="post" action="/user/update">
                 <ul>
                     <li>
-                        별명 <input type="text" name="nickname" value="{{content.nickname}}">
+                        ニックネーム: <input type="text" name="nickname" value="{{content.nickname}}">
                     </li>
                     <li>
-                        패스워드 <input type="password" name="userpw" value="{{content.userpw}}">
+                        パスワード: <input type="password" name="userpw" value="{{content.userpw}}">
                     </li>
                     <li>
-                        주소 <input type="text" name="address" value="{{content.address}}">
+                        住所: <input type="text" name="address" value="{{content.address}}">
                     </li>
                     <li>
-                        이메일 <input type="text" name="email" value="{{content.email}}">
+                        email: <input type="text" name="email" value="{{content.email}}">
                     </li>
                     <li>
-                        핸드폰번호 <input type="text" name="tell" value="{{content.tell}}">
+                        携帯番号: <input type="text" name="tell" value="{{content.tell}}">
                     </li>
                 </ul>
-                <input class="update_btn" type="submit" value="수정하기">
+                <input class="update_btn" type="submit" value="修正">
             </form>
         </div>  
     </div>  
