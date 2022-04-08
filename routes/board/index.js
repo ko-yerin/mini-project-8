@@ -3,7 +3,8 @@ const router = express.Router()
 const {pool} = require('../../db')
 
 router.get('/list', async(req,res) => {
-    const sql = `SELECT * FROM board order by idx DESC;`
+    // const sql = `SELECT * FROM board order by idx DESC;`
+    const sql = `select *, @idx:=@idx+1 as idx2, date_format(date, '%H:%m %m-%d-%Y ') as date from board,(select @idx:=0)A`
     const prepare = []
     const [result] = await pool.execute(sql,prepare)
 

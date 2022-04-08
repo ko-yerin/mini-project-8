@@ -15,4 +15,5 @@ a{
     width: 100%;
     height: 675px;
     background-image: url('/img/짱구대표배경.png');
+    z-index: -1;
 }
