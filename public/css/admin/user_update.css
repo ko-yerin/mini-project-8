@@ -73,14 +73,24 @@ a {
 .user_info_list {
     width: 100px;
     margin: 0 auto;
-    font-weight: bolder;
-    
+    font-weight: bolder; 
 }
 
 .user_info_list span {
     /* font-weight: bolder; */
     vertical-align: middle;
     white-space: nowrap; 
+}
+
+.user_info_list > span > input{
+    width: 300px;
+    height: 32px;
+    font-size: 15px;
+    border: 0;
+    border-radius: 15px;
+    outline: none;
+    padding-left: 10px;
+    background-color: rgb(233, 233, 233);
 }
 
 
