@@ -263,28 +263,41 @@ a{
 }
 
 #footer{
-    width: 100%;
+    padding-left: 300px;
+    padding-top: 50px;
+    width: 1725px;
     height: 1000px;
     background-image: url("/img/짱구야 배경2.gif");
 }
 
+#footer > div{
+    padding-top: 20px;
+
+}
+
 #guide{
     display: flex;
+    /* padding-right: 20px; */
 }
 
 #delivery_fee{
+    padding: 60px;
+    margin-right: 60px;
     width: 330px;
     height: 380px;
     background-color: #ffffff
 }
 
 #money{
+    padding: 60px;
+    margin-right: 60px;
     width: 330px;
     height: 380px;
     background-color: #ffffff
 }
 
 #time{
+    padding: 60px;
     width: 330px;
     height: 380px;
     background-color: #ffffff
