@@ -62,6 +62,11 @@ a{
     margin: 15px;
 }
 
+/* 
+.user_join ul li input {
+    margin: 5px;
+} */
+
 .join_input{
     width: 200px;
     height: 32px;

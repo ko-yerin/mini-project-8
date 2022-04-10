@@ -48,6 +48,10 @@ a {
     margin: 0 auto;
 }
 
+.user_update ul li {
+    margin: 15px;
+}
+
 .user_update > form > ul > li > input{
     width: 200px;
     height: 32px;
