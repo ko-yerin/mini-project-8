@@ -6,35 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="/css/admin/user_list.css" rel="stylesheet" type="text/css">
-    <!-- <style>
-        .logout {
-            display: flex; 
-            justify-content: flex-end;
-        }
-        .user_table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-        th {
-            border: 0.5px solid #000;
-            background-color: #acc4b4;
-        }
-        .user_table td {
-            border: 0.5px solid rgb(85, 4, 85);
-            padding: 5px;
-        }
-    </style> -->
 </head>
 <body>
     <div id="wrap">
         <div>
-            <div><a href="">管理</a></div>
+            <!-- <div><a href="">管理</a></div> -->
         </div>
-        <div class="logout">
-            <button><a href="/logout">ログアウト</a></button>
+        <div id="logout_group">
+            <button id="logout_btn"><a href="/logout">ログアウト</a></button>
         </div>
         <div>
-            <div><h1 id="user_list">見る</h1></div>
+            <div>
+                <h1 id="user_title">見る</h1>
+            </div>
         </div>
         <div class="main_content"> 
             <table class="user_table">

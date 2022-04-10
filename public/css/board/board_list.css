@@ -6,7 +6,6 @@
 body {
     cursor: url('../foo510.cur'), auto;
     background-image: url('/img/짱구대표배경.png');
-    
 }
 
 ul,li{
@@ -23,7 +22,7 @@ a{
 }
 
 #wrap {
-    width: 60%;
+    width: 50%;
     height: 675px;
     /* background-image: url('/img/짱구대표배경.png'); */
     background-color: #ffffff;
@@ -32,8 +31,15 @@ a{
 }
 
 #list_title {
-    padding: 10px;
-    /* border:1px  rgb(50, 168, 66); */
+    position: relative;
+    top: 90px;
+    justify-content: space-evenly;
+    margin: 30px;
+    padding-bottom: 20px;
+    right: 120px;
+    color:rgb(86,212,118);
+    /* padding: 10px;
+    border:1px  rgb(50, 168, 66);
     border-width: 2px;
     font-weight: bold;
     color: rgb(86, 212, 118);
@@ -41,12 +47,19 @@ a{
     border-top-left-radius: 5px; 
     border-top-right-radius: 5px;
     border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
+    border-bottom-right-radius: 5px; */
 }
 
-#main_content {
+/* #main_content {
     width: 80%;
     margin:0 auto
+} */
+
+#main_content {
+    position: relative;
+    width: 80%;
+    top: 70px;
+    right: -80px;
 }
 
 .list_table {

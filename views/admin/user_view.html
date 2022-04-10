@@ -9,10 +9,12 @@
 </head>
 <body>
     <div id="wrap">
-        <div class="logout">
-            <button><a href="/logout">ログアウト</a></button>
+        <div class="logout_group">
+            <button class="logout_btn"><a href="/logout">ログアウト</a></button>
         </div>
-        <div><h1 id="user_info">見る</h1></div>
+        <div>
+            <h1 id="user_info">見る</h1>
+        </div>
         <div class="user_info_list">
             <span> ID : </span>
             <span><input type="text" name="" id="" value="{{content.userid}}"></span><br/>
@@ -30,12 +32,14 @@
             <span><input type="text" name="" id="" value="{{content.birth}}"></span><br/>
             <span> email : </span>
             <span><input type="text" name="" id="" value="{{content.email}}"></span><br/>
-            <button id="user_list_btn">
-                <a href="/admin/userList">リスト</a>
-            </button>
-            <button id="user_update_btn">
-                <a href="/admin/userUpdate?userid={{content.userid}}">修正</a>
-            </button>
+            <div id="button_group">
+                <button id="user_list_btn">
+                    <a href="/admin/userList">リスト</a>
+                </button>
+                <button id="user_update_btn">
+                    <a href="/admin/userUpdate?userid={{content.userid}}">修正</a>
+                </button>
+            </div>
         </div>
     </div>
 </body>
