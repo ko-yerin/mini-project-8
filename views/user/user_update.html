@@ -14,9 +14,9 @@
                 <img src="/img/짱구로고이거로.png">
             </a>
         </h1>
-        <h2 id="update_title">
+        <h1 id="update_title">
             プロフィール 修正
-        </h2>
+        </h1>
         <div class="user_update">
             <form method="post" action="/user/update">
                 <ul>
@@ -36,7 +36,9 @@
                         携帯番号: <input type="text" name="tell" value="{{content.tell}}">
                     </li>
                 </ul>
-                <input class="update_btn" type="submit" value="修正">
+                <div class="update_group">
+                    <input class="update_btn" type="submit" value="修正">
+                </div>
             </form>
         </div>  
     </div>  
