@@ -24,7 +24,7 @@ a{
 #wrap {
     width: 50%;
     height: 675px;
-    background-color: #ffffff;
+    /* background-color: #ffffff; */
     margin:0 auto
 }
 
@@ -81,6 +81,9 @@ a{
 .join_btn {
     margin: 12px;
     padding: 2px;
+    width: 300px;
+    height: 60px;
+    font-size: 30px;
     border:1px solid rgb(50,168,66);
     color:rgb(86,212,118);
     border-width: 2px;

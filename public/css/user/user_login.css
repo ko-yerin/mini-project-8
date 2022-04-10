@@ -19,7 +19,7 @@ a{
 #wrap {
     width: 40%;
     height: 675px;
-    background-color: #ffffff;
+    /* background-color: #ffffff; */
     margin:0 auto;
 }
 
@@ -43,8 +43,8 @@ a{
 
 .main li input {
     margin: 10px 5px 3px 10px;
-    width: 200px;
-    height: 32px;
+    width: 300px;
+    height: 60px;
     font-size: 15px;
     border: 0;
     border-radius: 15px;
@@ -56,6 +56,10 @@ a{
 .login_btn {
     margin: 12px;
     padding: 2px;
+    width: 300px;
+    height: 60px;
+    font-size: 30px;
+    font-weight: bolder;
     border:1px solid rgb(50,168,66);
     color:rgb(86,212,118);
     border-width: 2px;

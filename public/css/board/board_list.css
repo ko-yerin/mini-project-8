@@ -25,7 +25,7 @@ a{
     width: 50%;
     height: 675px;
     /* background-image: url('/img/짱구대표배경.png'); */
-    background-color: #ffffff;
+    /* background-color: #ffffff; */
     margin:0 auto
    
 }
@@ -84,6 +84,10 @@ th {
 
 #write_btn {
     margin: 12px;
+    width: 150px;
+    height: 40px;
+    font-size: 20px;
+    text-align: center;
 }
 
 #write_btn>a {
