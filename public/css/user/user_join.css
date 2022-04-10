@@ -58,6 +58,10 @@ a{
     margin: 0 auto;
 }
 
+.user_join ul li {
+    margin: 15px;
+}
+
 .join_input{
     width: 200px;
     height: 32px;
