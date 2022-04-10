@@ -24,7 +24,7 @@ a{
 #wrap {
     width: 50%;
     height: 675px;
-    background-color: #ffffff;
+    /* background-color: #ffffff; */
     margin:0 auto
 }
 
@@ -46,6 +46,7 @@ a{
     justify-content: space-evenly;
     margin: 30px;
     padding-bottom: 40px;
+    font-size: 20px;
     right: -100px;
     color:rgb(86,212,118);
 }
@@ -58,5 +59,9 @@ a{
     vertical-align: middle;
     font-weight: bolder;
     margin: 0 auto;
+}
+
+.user_welcome > ul{
+    font-size: 20px;
 }
 
