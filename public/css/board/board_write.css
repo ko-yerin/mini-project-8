@@ -25,7 +25,7 @@ a {
 #wrap {
     width: 40%;
     height: 675px;
-    background-color: #ffffff;
+    /* background-color: #ffffff; */
     margin:0 auto;
     
 }
@@ -73,14 +73,23 @@ a {
 
 .back_list_btn {
     margin: 12px;
+    width: 50px;
+    height: 40px;
+    font-size: 20px;
+
 }
 
 .back_list_btn a {
     color: rgb(86, 212, 118);
 }
 
-.write_btn {
+.write_btn{
+    padding-left: 10px;
+    width: 50px;
+    height: 40px;
+    font-size: 20px;
     color: rgb(86, 212, 118);
+
 }
 
 .btn_group {
