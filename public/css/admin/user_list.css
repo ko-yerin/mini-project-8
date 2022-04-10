@@ -21,7 +21,7 @@ a {
     width: 60%;
     height: 720px;
     margin: 0 auto;
-    background-color: #ffffff;
+    /* background-color: #ffffff; */
 }
 #user_title {
     color:rgb(86,212,118);
