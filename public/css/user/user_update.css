@@ -48,6 +48,17 @@ a {
     margin: 0 auto;
 }
 
+.user_update > form > ul > li > input{
+    width: 200px;
+    height: 32px;
+    font-size: 15px;
+    border: 0;
+    border-radius: 15px;
+    outline: none;
+    padding-left: 10px;
+    background-color: rgb(233, 233, 233);
+}
+
 .update_btn {
     margin: 15px;
     padding: 3px;
