@@ -24,10 +24,6 @@ a{
 }
 
 #view_title {
-    /* display: flex;
-    justify-content: space-evenly;
-    margin: 30px;
-    color:rgb(86,212,118); */
     position: relative;
     top: 90px;
     left:160px; 

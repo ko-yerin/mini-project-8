@@ -14,9 +14,9 @@
                 <img src="/img/짱구로고이거로.png">
             </a>
         </h1>
-        <h2 id="profile_title">
+        <h1 id="profile_title">
             내프로필
-        </h2>
+        </h1>
         <div class="user_profile">
             <ul>
                 <li>
@@ -44,11 +44,13 @@
                     生年月日: {{ content.birth }}
                 </li>
             </ul>
-            <button id="profile_update_btn"><a href="/user/update?userid={{content.userid}}">修正</a></button>
-            <form class="m_s_btn" method="post" action="/user/member_secession">
-                <input type="hidden" name="userid" value="{{content.userid}}">
-                <input type="submit" value="会員脱退">
-            </form>     
+            <div id="btn_group">
+                <button id="profile_update_btn"><a href="/user/update?userid={{content.userid}}">修正</a></button>
+                <form class="m_s_btn" method="post" action="/user/member_secession">
+                    <input type="hidden" name="userid" value="{{content.userid}}">
+                    <input id ="go_out" type="submit" value="会員脱退">
+                </form>  
+            </div>   
         </div>   
     </div> 
 </body>

@@ -3,6 +3,11 @@
     padding: 0;
 }
 
+body {
+    cursor: url('../foo510.cur'), auto;
+    background-image: url('/img/짱구대표배경.png');
+}
+
 ul,li{
     list-style: none;
 }
@@ -17,7 +22,56 @@ a{
 }
 
 #wrap {
-    width: 100%;
+    width: 50%;
     height: 675px;
-    background-image: url('/img/짱구대표배경.png');
+    background-color: #ffffff;
+    margin:0 auto
+}
+
+#join_title {
+    position: relative;
+    top: 90px;
+    justify-content: space-evenly;
+    margin: 30px;
+    padding-bottom: 20px;
+    right: -100px;
+    color:rgb(86,212,118);
+}
+
+#join_explain {
+    position: relative;
+    top: 90px;
+    justify-content: space-evenly;
+    margin: 30px;
+    padding-bottom: 20px;
+    right: -160px;
+    color:rgb(86,212,118);
+}
+
+.user_join {
+    position: relative;
+    width: 80%;
+    top: 70px;
+    right: -180px;
+    vertical-align: middle;
+    font-weight: bolder;
+    margin: 0 auto;
+}
+
+.join_btn {
+    margin: 12px;
+    padding: 2px;
+    border:1px solid rgb(50,168,66);
+    color:rgb(86,212,118);
+    border-width: 2px;
+    background-color: rgba(0, 0, 0, 0);
+    border-top-left-radius: 5px; 
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.join_btn:hover {
+    background-color: rgb(74, 139, 114);
+    color: white;
 }
