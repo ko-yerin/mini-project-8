@@ -5,6 +5,7 @@
 
 body {
     cursor: url('../foo510.cur'), auto;
+    background-image: url('/img/짱구대표배경.png');
 }
 
 ul,li {
@@ -16,7 +17,111 @@ a {
 }
 
 #wrap {
-    width: 100%;
+    width: 60%;
     height: 675px;
     background-color: #ffffff;
+    margin: 0 auto;
+}
+
+.logout_btn {
+    margin: -70px 10px 0 0;
+}
+
+.logout_btn a {
+    color: rgb(86,212,118);
+}
+
+.logout_group {
+    position: relative;
+}
+
+.logout_group button {
+    margin: 20px 10px 20px 20px;
+    float: right;
+    padding: 2px;
+    border: 1px solid rgb(50, 168, 66);
+    border-width: 2px;
+    font-weight: bold;
+    color: rgb(86, 212, 118);
+    border-top-left-radius: 5px; 
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.logout_group button:hover {
+    background-color: rgb(74, 139, 114);
+}
+
+.logout_group button:hover a {
+    color: white;
+}
+
+
+#user_info {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 30px;
+    color:rgb(86,212,118);
+}
+
+
+.user_info_list {
+    /* display:flex;  */
+    /* justify-content: space-evenly; */
+    width: 100px;
+    margin: 0 auto;
+    /* float: center; */
+    /* padding: 0px; */
+
+    
+}
+
+.user_info_list span {
+    /* display: flex; */
+    /* width: 100px; */
+    font-weight: bolder;
+    vertical-align: middle;
+    white-space: nowrap; 
+    /* 글씨 내려가는거 한줄로 바꿈 */
+    /* margin: 0 auto; */
+}
+
+#user_list_btn {
+    margin: 12px;
+}
+
+#user_list_btn a {
+    color: rgb(86, 212, 118);
+}
+
+#user_update_btn a {
+    color: rgb(86, 212, 118);
+}
+
+#button_group {
+    position: relative;
+    white-space: nowrap; 
+}
+
+#button_group button {
+    padding: 3px;
+    border: 1px solid rgb(50, 168, 66);
+    border-width: 2px;
+    font-weight: bold;
+    color: rgb(86, 212, 118);
+    border-top-left-radius: 5px; 
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-color: rgba(0, 0, 0, 0); 
+}
+
+#button_group button:hover {
+    background-color: rgb(74, 139, 114);
+}
+
+#button_group button:hover a {
+    color: white;
 }

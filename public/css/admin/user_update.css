@@ -3,6 +3,11 @@
     padding: 0;
 }
 
+body {
+    cursor: url('../foo510.cur'), auto;
+    background-image: url('/img/짱구대표배경.png');
+}
+
 ul,li {
     list-style: none;
 }
@@ -12,7 +17,137 @@ a {
 }
 
 #wrap {
-    width: 100%;
+    width: 40%;
     height: 675px;
     background-color: #ffffff;
+    margin: 0 auto;
+}
+
+.logout_btn {
+    
+    margin: -70px 10px 0 0;
+}
+
+/* .logout_btn a {
+    color: rgb(86,212,118);
+} */
+
+.logout_group {
+    position: relative;
+}
+
+.logout_group button {
+    margin: 20px 10px 20px 20px;
+    float: right;
+    padding: 2px;
+    border: 1px solid rgb(50, 168, 66);
+    border-width: 2px;
+    font-weight: bold;
+    color: rgb(86, 212, 118);
+    border-top-left-radius: 5px; 
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.logout_group button a {
+    color: rgb(86,212,118);
+}
+
+.logout_group button:hover {
+    background-color: rgb(74, 139, 114);
+}
+
+.logout_group button:hover a {
+    color: white;
+}
+
+#update_title {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 30px;
+    color:rgb(86,212,118);
+}
+
+.user_info_list {
+    width: 100px;
+    margin: 0 auto;
+    font-weight: bolder;
+    
+}
+
+.user_info_list span {
+    /* font-weight: bolder; */
+    vertical-align: middle;
+    white-space: nowrap; 
+}
+
+
+.userinfo_edit_btn {
+    margin: 12px;
+    color: rgb(86, 212, 118);
+}
+
+.user_list_go {
+    color: rgb(86, 212, 118);
+}
+
+.user_group {
+    /* position: relative; */
+    /* white-space: nowrap; */
+    width: 140px;
+    margin: 0 auto;
+    
+}
+
+.user_group input {
+    /* position: relative;
+    white-space: nowrap; */
+    padding: 3px;
+    border: 1px solid rgb(50, 168, 66);
+    border-width: 2px;
+    font-weight: bold;
+    color: rgb(86, 212, 118);
+    border-top-left-radius: 5px; 
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-color: rgba(0, 0, 0, 0);
+    
+}
+
+.user_group input:hover {
+    background-color: rgb(74, 139, 114);
+    color: white;
+}
+
+.active_stop_btn {
+   
+    margin: 12px;
+    color: rgb(86, 212, 118);
+}
+
+.stop_group {
+    width: 100px;
+    margin: 0 auto;
+    float: right;
+}
+
+.stop_group input {
+    padding: 3px;
+    border: 1px solid rgb(50, 168, 66);
+    border-width: 2px;
+    font-weight: bold;
+    color: rgb(86, 212, 118);
+    border-top-left-radius: 5px; 
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.stop_group input:hover {
+    background-color: rgb(74, 139, 114);
+    color: white;
 }

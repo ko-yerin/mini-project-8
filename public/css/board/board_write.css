@@ -3,6 +3,11 @@
     padding: 0;
 }
 
+body {
+    cursor: url('../foo510.cur'), auto;
+    background-image: url('/img/짱구대표배경.png');
+}
+
 ul,li {
     list-style:none;
 }
@@ -14,10 +19,101 @@ a {
 #LOGO > a > img{
     float: left;
     width: 200px;
+    
 }
 
 #wrap {
-    width: 100%;
+    width: 40%;
     height: 675px;
-    background-image: url('/img/짱구대표배경.png');
+    background-color: #ffffff;
+    margin:0 auto;
+    
 }
+/* 
+#table_line {
+    border: 1px solid red;
+    position: relative;
+    width: 100%;
+    height: 100%;
+} */
+
+#write_title {
+    /* display: flex; */
+    position: relative;
+    top: 90px;
+    justify-content: space-evenly;
+    margin: 30px;
+    padding-bottom: 20ox;
+    color:rgb(86,212,118);
+}
+
+.board_write {
+    position: relative;
+    top: 80px;
+    right: 60px;
+
+}
+
+#write_list {
+    width: 100px;
+    margin: 0 auto;
+    font-weight: bolder;
+}
+
+.back_list_btn {
+    margin: 12px;
+}
+
+.back_list_btn a {
+    color: rgb(86, 212, 118);
+}
+
+.write_btn {
+    color: rgb(86, 212, 118);
+}
+
+.btn_group {
+    position: relative;
+    width: 140px;
+    margin: 0 auto;
+}
+
+.btn_group button {
+    padding: 3px;
+    border: 1px solid rgb(50, 168, 66);
+    border-width: 2px;
+    font-weight: bold;
+    color: rgb(86, 212, 118);
+    border-top-left-radius: 5px; 
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-color: rgba(0, 0, 0, 0); 
+}
+
+.btn_group button:hover {
+    background-color: rgb(74, 139, 114);
+}
+
+.btn_group button:hover a {
+    color: white;
+}
+
+.btn_group input {
+    padding: 3px;
+    border: 1px solid rgb(50, 168, 66);
+    border-width: 2px;
+    font-weight: bold;
+    color: rgb(86, 212, 118);
+    border-top-left-radius: 5px; 
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-color: rgba(0, 0, 0, 0); 
+}
+
+.btn_group input:hover {
+    background-color: rgb(74, 139, 114);
+    color: white;
+}
+

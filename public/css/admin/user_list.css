@@ -23,6 +23,9 @@ a {
     margin: 0 auto;
     background-color: #ffffff;
 }
+#user_title {
+    color:rgb(86,212,118);
+}
 
 /* .logout {
     display: flex; 
@@ -42,6 +45,8 @@ a {
 
 #logout_group {
     position: relative;
+    /* display: flex;
+    margin: 30px; */
     /* display: flex; */
     /* float: right;
     padding: 30px 20px 0 0;
@@ -51,6 +56,8 @@ a {
 
 #logout_group button{
     
+    margin: 20px 10px 20px 20px;
+    float: right;
     padding: 3px;
     border: 1px solid rgb(50, 168, 66);
     border-width: 2px;
