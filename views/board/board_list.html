@@ -24,7 +24,7 @@
                     <th>番号</th>
                     <th>タイトル</th>
                     <th>作者</th>
-                    <th>内容</th>
+                    <th class="table_date">内容</th>
                 </tr>
                 
                 {% for item in content %}
@@ -33,7 +33,7 @@
                     <td>{{ item.idx }}</td>
                     <td><a href = "/board/view?idx={{item.idx}}">{{ item.subject }}</a></td>
                     <td>{{ item.nickname }}</td>
-                    <td>{{ item. date }}</td>
+                    <td class="table_date">{{ item. date }}</td>
                 </tr>
                 {% endfor %}
             </table>

@@ -77,12 +77,12 @@ th {
     padding: 5px;
 
 }
+.list_table .table_date {
+    width: 150px;
+    text-align: center;
+}
 
 #write_btn {
-    /* margin: -4px;display: flex;
-    float: right;
-    padding: 30px 20px 0 0;
-    margin: -70px 10px 0 0; */
     margin: 12px;
 }
 
