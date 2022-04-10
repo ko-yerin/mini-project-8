@@ -109,11 +109,11 @@ router.post('/login', async (req, res) => {
         } else if (arrout.userid === userid && arrout.userpw === userpw) {
             // console.log('로그인 적은게 db랑같아요.')
             // console.log(arrout)
-            const session_user = {
-                userid: arrout.userid, 
-                username: arrout.username, 
-                nickname: arrout.nickname
-            }//세션에 넣을걸 userid, username, nickname을 정했고    
+            // const session_user = {
+            //     userid: arrout.userid, 
+            //     username: arrout.username, 
+            //     nickname: arrout.nickname
+            // }//세션에 넣을걸 userid, username, nickname을 정했고    
             //req.session.user = arrout.userid, arrout.username 이런식으로 
             //넣었는데 계속 전부다 나와서 이런식으로 따로 변수안에 넣어주었고
             //객체안에 넣어줘야 나중에 꺼내쓰기 쉬워서 객체안에 넣어주었고
@@ -122,7 +122,7 @@ router.post('/login', async (req, res) => {
 
 
             // console.log('세션유저:',session_user)
-            req.session.user = session_user
+            // req.session.user = session_user
             // req.session.user = arrout
             //분명히 맞게 적은거 같은데 
             //TypeError: Cannot set properties of undefined (setting 'user')
@@ -131,15 +131,35 @@ router.post('/login', async (req, res) => {
             //알고보니 server.js에서 
             //app.use(session(sessionObj)) 이걸
             //app.use (router) 이거 밑에 적어서... 위로 올려주었다...
-            res.send(alertmove('/', '로그인 성공'))
+            
+            // 한번더 sql에 접속해서 해당 id의 active를 확인.
+            // 그 액티브가 1이면은 로그인 성공
+            // 2면은 회원 정지됨
+
+            if (arrout.active === 1) {
+                const session_user = {
+                    userid: arrout.userid, 
+                    username: arrout.username, 
+                    nickname: arrout.nickname
+                }
+                
+                req.session.user = session_user
+                res.send(alertmove('/', '로그인 성공'))
+            } else if (arrout.active === 0) {
+                res.send(alertmove('/','이용 정지된 회원입니다. 관리자에게 문의하세요.'))
+            }
+            //active를  쓰기위해서 139~150번째 코드를 작성해주었다
+            //우선 로그인시 아디와 비번은 일치+active가 1이어야 로그인성공이 되므로
+            //아디와 비번은 일치하는 곳에 코드를 작성해야된다
+            //그곳에 active에 관한 조건을 추가해주기위해 안에 if 조건문을 써주었다
+            //그리고 아디비번만 일치하면안되고 active도 1이어야 세션이 작동하도록 active코드안으로 session_user변수를 옮겨주었다
+            
         } else if (userid === arrout.userid && userpw !== arrout.userpw){
             res.send(alertmove('/user/login', '비번을 다시입력해 주세요'))            //아디는 제대로, 비번을 틀리게
             //catch문에서는  아디, 비번둘다 또는 아디만 틀렸을경우는 작동을 하는데
             //비번만 틀린건 undefined가 아닌건지 작동이 안되서 여기에 코드를 입력해주었다
         }
-        // else if(active===0){
-        //     res.send(alertmove('/','이용중지된 회원입니다 관라자에게 문의하세요'))
-        // }
+        
         // else if (arrout.userid !== userid && arrout.userpw !== userpw) {
         //     // console.log('아이디 비번 둘 다 틀림')
         //     res.send(alertmove('/user/login', '아이디 또는 비번을 확인후 다시 입력해주세요'))
